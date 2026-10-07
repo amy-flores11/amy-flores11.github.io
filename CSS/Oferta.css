@@ -1,0 +1,43 @@
+body {
+    background-color: aliceblue;
+}
+
+.tarjeta-producto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b6dae9;
+    border-radius: 15px;
+    padding: 20px;
+    width: 320px;
+}
+
+.tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b6dae9;
+    border-radius: 15px;
+    padding: 20px;
+    width: 320px;
+}
+
+.a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b6dae9;
+    border-radius: 15px;
+    padding: 20px;
+    width: 320px;
+}
+
+.b {
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b6dae9;
+    border-radius: 15px;
+    padding: 20px;
+    width: 320px;
+}

@@ -1,0 +1,111 @@
+body.body-login {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+.contenedor-auth {
+  background: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(2, 132, 199, 0.08), 0 5px 15px rgba(0, 0, 0, 0.04);
+  border: 1px solid #bae6fd;
+}
+
+.tabs-auth {
+  display: flex;
+  background-color: #f0f9ff;
+  padding: 4px;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid #e0f2fe;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 0.75rem 0.5rem;
+  border: none;
+  background: transparent;
+  color: #0369a1;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tab-btn.active {
+  background-color: #ffffff;
+  color: #0284c7;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.15);
+}
+
+.form-auth {
+  display: none;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-auth.active {
+  display: flex;
+}
+
+.form-auth h2 {
+  margin: 0 0 0.5rem 0;
+  color: #0f172a;
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.form-auth input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+.form-auth input:focus {
+  border-color: #0284c7;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
+}
+
+.form-auth .btn-primary {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+}
+
+.form-auth .btn-primary:hover {
+  background-color: #0369a1;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35);
+}
+
+.form-auth .btn-primary:active {
+  transform: translateY(0);
+}

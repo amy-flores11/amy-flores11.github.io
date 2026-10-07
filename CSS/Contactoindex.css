@@ -1,0 +1,188 @@
+/* --- RESET BÁSICO --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  padding: 3rem 10%;
+}
+
+/* --- SECCIÓN SUPERIOR DE CONTACTO --- */
+.contacto-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+/* Columna Izquierda */
+.info-tecnoshop {
+  flex: 1;
+}
+
+.tag-badge {
+  background-color: #e3f2f1;
+  color: #333;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+}
+
+.lista-interes {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.lista-interes li {
+  margin-bottom: 0.6rem;
+}
+
+.lista-interes a {
+  color: #000;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.lista-interes a:hover {
+  color: #3c9fb6;
+}
+
+/* Columna Derecha (Redes Sociales) */
+.redes-sociales {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.box-badge {
+  background-color: #a0c9d9;
+  color: #000;
+  padding: 1.2rem 1.8rem;
+  border-radius: 20px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-align: center;
+  width: 280px;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 280px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  gap: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.social-item:hover {
+  transform: translateX(-5px);
+}
+
+.icon-social {
+  font-size: 2.8rem;
+}
+
+.handle {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+/* --- BANNER CATÁLOGO --- */
+.catalogo-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.font-bar {
+  color: #d1d5db;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.catalogo-link {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+
+/* --- FOOTER --- */
+.footer-sections {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.footer-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-header {
+  background-color: #a0c9d9;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.6rem 0;
+  width: 180px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.col-content ul {
+  list-style: none;
+  text-align: left;
+}
+
+.col-content li {
+  margin-bottom: 0.4rem;
+}
+
+.col-content a {
+  color: #000;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.col-content a:hover {
+  color: #3c9fb6;
+}
+
+/* Divisores verticales en azul degradado */
+.divider {
+  width: 5px;
+  background: linear-gradient(180deg, #32b5e5 0%, #1d4ed8 100%);
+  border-radius: 4px;
+  align-self: stretch;
+  margin: 0 1rem;
+}

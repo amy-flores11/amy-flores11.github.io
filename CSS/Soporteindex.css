@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+}
+
+header{
+    width:100%;
+    height:80px;
+    background:#98c8d9;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+}
+
+header h1{
+    font-size:45px;
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.menu input{
+    width:180px;
+    padding:8px;
+    border-radius:20px;
+    border:2px solid black;
+}
+
+.principal{
+    width:90%;
+    margin:40px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    padding:40px;
+}
+
+.texto{
+    width:45%;
+}
+
+.texto h2{
+    font-size:70px;
+    margin-bottom:30px;
+    margin:20px;
+}
+
+.texto p{
+    font-size:28px;
+    color:#444;
+    margin-bottom:30px;
+    margin:20px;
+}
+
+.texto input{
+    width:260px;
+    padding:12px;
+    border-radius:25px;
+    border:3px solid black;
+    font-size:18px;
+}
+
+
+.imagen{
+    width:75%;
+    margin-left: 100px;
+    text-align:center;
+}
+
+.imagen img{
+    width:75%;
+    position: relative;
+    left: 100px;
+} 
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f2f2f2;
+}
+
+.titulo{
+    text-align:center;
+    margin:40px;
+    font-size:40px;
+}
+
+.acordeon{
+    width:70%;
+    margin:10px auto;
+    display:block;
+    background:#8cc7d8;
+    color:black;
+    padding:18px;
+    font-size:18px;
+    font-weight:bold;
+    text-align:left;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.acordeon:hover{
+    background:#6db7cc;
+}
+
+.respuesta{
+    width:70%;
+    margin:0 auto 15px auto;
+    display:none;
+    background:white;
+    padding:18px;
+    border-radius:0 0 12px 12px;
+    border:1px solid #ddd;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+.respuesta p{
+    color:#555;
+    font-size:17px;
+    line-height:25px;
+}
