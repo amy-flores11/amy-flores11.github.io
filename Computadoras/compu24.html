@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Información</title>
+    <link rel="stylesheet" href="/CSS/Watch1.css">
+     <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Tecno shop</div>
+
+    <nav class="nav-links">
+      <a href="/index.html">Inicio</a>
+      <a href="#" class="active" >Producto</a>
+      <a href="../../HTML/Ofertas.html">Ofertas</a>
+      <a href="../../HTML/Soporte.html">Soporte</a>
+      <a href="../../HTML/Contacto.html">Contacto</a>
+
+      <button type="button" class="btn-carrito-nav nav-carrito-link" id="btnAbrirCarrito" onclick="toggleCarrito()">
+  <i class="fa-solid fa-cart-shopping"></i>
+  <span class="badge-contador" id="carrito-contador">0</span>
+</button>
+    </nav>
+
+    <div class="user-session id="btn-login">
+    <a href="../../HTML/login.html" class="user-session" id="btn-login">
+       <span class="material-symbols-outlined icon-user">account_circle</span>
+      <span id="texto-usuario">Iniciar sesión</span>
+    </a> 
+    </div>
+  </header>
+
+  <div class="overlay-carrito" id="overlayCarrito" onclick="toggleCarrito()"></div>
+
+<aside class="panel-carrito" id="panelCarrito">
+  <div class="carrito-header">
+    <h3>Mi Carrito (<span id="carrito-cant-total">0</span>)</h3>
+    <button type="button" class="btn-cerrar" onclick="toggleCarrito()">&times;</button>
+  </div>
+
+  <div class="carrito-items" id="carritoItems">
+  </div>
+
+  <div class="carrito-footer">
+    <div class="resumen-linea">
+      <span>Subtotal</span>
+      <strong id="carrito-subtotal">$0.00</strong>
+    </div>
+    <p class="envio-nota"><i class="fa-solid fa-truck-fast"></i> ¡Envío gratis aplicado!</p>
+    <button type="button" class="btn-checkout" onclick="procesarPago()">COMPRAR AHORA</button>
+  </div>
+</aside>
+
+<script src="../../JS/carrito.js"></script>
+
+    <main class="contenedor-producto">
+    
+    <!-- aqui es donde va la imagen -->
+    <div class="columna-izquierda">
+      <div class="contenedor-imagen">
+        <img src="../../IMG/HP EliteBook 8.jpg" alt="Producto Tecnoshop" class="imagen-producto">
+      </div>
+    </div>
+
+    <!-- aquiva la info-->
+    <div class="columna-derecha">
+      <div class="contenido-info">
+        <h1 class="nombre-producto"> HP EliteBook 8 </h1>
+        
+        <p class="descripcion-producto">
+            Es una laptop empresarial de gama alta, diseñada para profesionales que requieren seguridad, rendimiento y 
+            durabilidad. La serie EliteBook se caracteriza por su chasis metálico premium, funciones avanzadas de seguridad y 
+            gran autonomía, siendo ideal para entornos corporativos y de productividad intensiva, con 512 GB de almacenamiento.
+        </p>
+        <!--Aqui pondra a detalle el tipo de pantala, procesador etc del producto-->
+
+        <ul class="detalles-lista">
+          <li><strong>Pantalla:</strong> 16" Full HD o WUXGA (dependiendo de configuración), IPS, antirreflejo, brillo elevado, biseles delgados.</li>
+          <li><strong>Procesador:</strong> Intel Core (serie U5‑325, equivalente a un Core i5 de última generación), optimizado para eficiencia y multitarea.</li>
+          <li><strong>Memoria:</strong> 16 GB RAM DDR5, excelente para productividad avanzada.</li>
+          <li><strong>Conectividad:</strong> Thunderbolt 4, USB‑C, USB‑A, HDMI, Wi‑Fi 6E, Bluetooth 5.3.</li>
+        </ul>
+        <div class="acciones">
+          <button class="btn-carrito">Agregar al Carrito </button>
+          <a href="/HTML/Producto.html" class="btn-regresar">⬅ Regresar a Categorías</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer-sections">
+    
+    <!-- Columna 1: Información -->
+    <div class="footer-col">
+      <div class="col-header">Información</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="/HTML/Informaciongeneral.html">Quiénes somos</a></li>
+          <li><a href="#">Visión y Misión</a></li>
+          <li><a href="#">Historia</a></li>
+          <li><a href="#">Sucursales</a></li>
+          <li><a href="#">Servicios</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Columna 2: Categorías -->
+    <div class="footer-col">
+      <div class="col-header">Categorías</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="/HTML/Producto.html">Celulares</a></li>
+          <li><a href="/HTML/Producto.html">Computadoras</a></li>
+          <li><a href="/HTML/Producto.html">Airpods</a></li>
+          <li><a href="/HTML/Producto.html">Ipads</a></li>
+          <li><a href="/HTML/Producto.html">Relojs inteligentes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Columna 3: Técnico -->
+    <div class="footer-col">
+      <div class="col-header">Técnico</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="/HTML/Contacto.html">Servicio al cliente</a></li>
+          <li><a href="/HTML/Soporte.html">Preguntas frecuentes</a></li>
+          <li><a href="/HTML/Contacto.html">Contáctenos</a></li>
+          <li><a href="#">Seguridad del sitio</a></li>
+          <li><a href="#">Política y Privacidad</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="JS/scritp.js"></script>
+</body>
+</html>
+
