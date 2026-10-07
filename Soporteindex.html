@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <title>Soporte</title>
+    <link rel="stylesheet" type="text/css " href="/CSS/Soporte.css">
+
+    </head>
+    <body>
+
+        <header>
+            <h1>Soporte</h1>
+
+        </header>
+        <div class="contenido">
+
+    <div class="texto">
+        <h2>Te ayudamos con lo que necesites</h2>
+
+        <p>
+            Encuentra respuestas, soluciones y recursos
+            para tus productos Apple.
+        </p>
+    </div>
+
+    <div class="imagen">
+        <img src="/IMG/apple.png">
+    </div>
+
+    <h2 class="titulo">Preguntas Frecuentes</h2>
+
+<button class="acordeon">📱 ¿Cómo puedo iniciar sesión?</button>
+<div class="respuesta">
+    <p>Ingresa tu correo electrónico y tu contraseña para acceder a tu cuenta.</p>
+</div>
+
+<button class="acordeon">🔒 ¿Cómo recupero mi contraseña?</button>
+<div class="respuesta">
+    <p>Haz clic en "Olvidé mi contraseña" y sigue las instrucciones enviadas a tu correo.</p>
+</div>
+
+<button class="acordeon">🛠️ ¿Cómo contactar al soporte?</button>
+<div class="respuesta">
+    <p>Puedes comunicarte con nosotros por correo, teléfono o chat en línea.</p>
+</div>
+
+<button class="acordeon">💳 ¿Qué métodos de pago aceptan?</button>
+<div class="respuesta">
+    <p>Aceptamos tarjetas de crédito, débito y otros métodos de pago disponibles.</p>
+</div>
+
+<button class="acordeon">🚚 ¿Cuánto tarda un envío?</button>
+<div class="respuesta">
+    <p>Los envíos suelen tardar entre 2 y 5 días hábiles.</p>
+</div>
+
+<button class="acordeon">📍 ¿Dónde están ubicados?</button>
+<div class="respuesta">
+    <p>Puedes encontrar nuestras sucursales en la sección "Quienes somos".</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("acordeon");
+
+for (var i = 0; i < acc.length; i++) {
+    acc[i].onclick = function() {
+        var panel = this.nextElementSibling;
+
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+
+
+    </body>
+</html>

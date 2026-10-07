@@ -1,0 +1,3270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Productos</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/Producto.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+    
+<body>
+
+    <header class="navbar">
+    <div class="logo">Tecno shop</div>
+
+    <nav class="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="#" class="active">Producto</a>
+      <a href="Ofertas.html">Ofertas</a>
+      <a href="Soporte.html">Soporte</a>
+      <a href="Contacto.html">Contacto</a>
+
+      <button type="button" class="btn-carrito-nav nav-carrito-link" id="btnAbrirCarrito" onclick="toggleCarrito()">
+  <i class="fa-solid fa-cart-shopping"></i>
+  <span class="badge-contador" id="carrito-contador">0</span>
+</button>
+
+    </nav>
+
+    <div class="user-session id="btn-login">
+    <a href="../HTML/login.html" class="user-session" id="btn-login">
+       <span class="material-symbols-outlined icon-user">account_circle</span>
+      <span id="texto-usuario">Iniciar sesión</span>
+    </a> 
+    </div>
+  </header>
+
+  <div class="overlay-carrito" id="overlayCarrito" onclick="toggleCarrito()"></div>
+
+<aside class="panel-carrito" id="panelCarrito">
+  <div class="carrito-header">
+    <h3>Mi Carrito (<span id="carrito-cant-total">0</span>)</h3>
+    <button type="button" class="btn-cerrar" onclick="toggleCarrito()">&times;</button>
+  </div>
+
+  <div class="carrito-items" id="carritoItems">
+  </div>
+
+  <div class="carrito-footer">
+    <div class="resumen-linea">
+      <span>Subtotal</span>
+      <strong id="carrito-subtotal">$0.00</strong>
+    </div>
+    <p class="envio-nota"><i class="fa-solid fa-truck-fast"></i> ¡Envío gratis aplicado!</p>
+    <button type="button" class="btn-checkout" onclick="procesarPago()">COMPRAR AHORA</button>
+  </div>
+</aside>
+
+
+  <main class="categorias-container">
+
+    <div class="slider-wrapper">
+      
+      <button class="nav-arrow" id="btn-prev">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="carousel-window">
+        <div class="carousel-track" id="track">
+
+          <div class="category-card">
+            <div class="blue-frame">
+              <div class="img-box">
+                <img src="../IMG/iphone17.jpg" alt="Celulares">
+              </div>
+            </div>
+            <p class="category-title">Celulares</p>
+          </div>
+
+          <div class="category-card">
+            <div class="blue-frame">
+              <div class="img-box">
+                <img src="../IMG/macbook.jpg" alt="Computadoras">
+              </div>
+            </div>
+            <p class="category-title">Computadoras</p>
+          </div>
+
+          <div class="category-card">
+            <div class="blue-frame">
+              <div class="img-box">
+                <img src="../IMG/png13.png" alt="Tablets">
+              </div>
+            </div>
+            <p class="category-title">Tablets</p>
+          </div>
+
+          <div class="category-card">
+            <div class="blue-frame">
+              <div class="img-box">
+                <img src="../IMG/airpods max.jpg" alt="Airpods">
+              </div>
+            </div>
+            <p class="category-title">Airpods</p>
+          </div>
+
+          <div class="category-card">
+            <div class="blue-frame">
+              <div class="img-box">
+                <img src="../IMG/relog.jpg" alt="Relojes">
+              </div>
+            </div>
+            <p class="category-title">Relojes</p>
+          </div>
+
+          <div class="category-card">
+            <div class="blue-frame">
+              <div class="img-box">
+                <img src="../IMG/Pencil.jpg" alt="Accesorios">
+              </div>
+            </div>
+            <p class="category-title">Accesorios</p>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="nav-arrow" id="btn-next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+    </div>
+
+    <h1 class="main-title">Categorías</h1>
+
+  </main>
+
+  <header class="header-principal">
+    <h1 class="titulo-centrado">Selección de productos</h1>
+  </header>
+
+  <main class="contenedor-principal">
+
+    <!-- SECCIÓN 1: CELULARES -->
+    <section id="celulares" class="categoria-seccion">
+      <h2 class="titulo-categoria">Celulares</h2>
+      <div class="grid-productos">
+
+              <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone16.png" alt="iPhone 16"></div>
+          <h3>iPhone 16</h3>
+          <p class="precio">Desde $799.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular1.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 15 Pro Max.png" alt="iPhone 15 Pro Max"></div>
+          <h3>iPhone 15 Pro Max</h3>
+          <p class="precio">Desde $1,110.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular2.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iphone17.jpg" alt="iPhone 17 Pro Max"></div>
+          <h3>iPhone 17 Pro Max</h3>
+          <p class="precio">Desde $1,600.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular3.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 13 Pro Max.jpe" alt="iPhone 13 Pro Max"></div>
+          <h3>iPhone 13 Pro Max</h3>
+          <p class="precio">Desde $999.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular4.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 12.jpe" alt="iPhone 12"></div>
+          <h3>iPhone 12</h3>
+          <p class="precio">Desde $500.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular5.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 14 Pro Max.jpe" alt="iPhone 14 Pro Max"></div>
+          <h3>iPhone 14 Pro Max</h3>
+          <p class="precio">Desde $800.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular6.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 17Air.jpe" alt="iPhone Air"></div>
+          <h3>iPhone Air</h3>
+          <p class="precio">Desde $1,275.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular7.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 15 Plus.jpe" alt="iPhone 15 Plus"></div>
+          <h3>iPhone 15 Plus</h3>
+          <p class="precio">Desde $850.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular8.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 11.jpe" alt="iPhone 11"></div>
+          <h3>iPhone 11</h3>
+          <p class="precio">Desde $450.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular9.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <!-- Hasta aca estan 9 productos -->
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 17.jpe" alt="iPhone 17"></div>
+          <h3>iPhone 17</h3>
+          <p class="precio">Desde $1,050.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular10.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 8 Plus.jpe" alt="iPhone 8 Plus"></div>
+          <h3>iPhone 8 Plus</h3>
+          <p class="precio">Desde $200.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular11.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 10 Plus.jpe" alt="iPhone 10 Plus"></div>
+          <h3>iPhone 10 Plus</h3>
+          <p class="precio">Desde $350.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular12.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 14 Plus.jpe" alt="iPhone 14 Plus"></div>
+          <h3>iPhone 14 Plus</h3>
+          <p class="precio">Desde $899.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular13.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone7.jpe" alt="iPhone 7"></div>
+          <h3>iPhone 7</h3>
+          <p class="precio">Desde $170.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular14.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone XR.jpe" alt="iPhone XR"></div>
+          <h3>iPhone XR</h3>
+          <p class="precio">Desde $240.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular15.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone13.jpe" alt="iPhone 13"></div>
+          <h3>iPhone 13</h3>
+          <p class="precio">Desde $599.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular16.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone X.jpe" alt="iPhone X"></div>
+          <h3>iPhone X</h3>
+          <p class="precio">Desde $999.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular17.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 6S Plus.jpe" alt="iPhone 6S Plus"></div>
+          <h3>iPhone 6S Plus</h3>
+          <p class="precio">Desde $549.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular18.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <!-- 18 productos por categoría -->
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 16 Plus.jpe" alt="iPhone 16 Plus"></div>
+          <h3>iPhone 16 Plus</h3>
+          <p class="precio">Desde $899.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular19.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 11 Pro.jpe" alt="iPhone 11 Pro"></div>
+          <h3>iPhone 11 Pro</h3>
+          <p class="precio">Desde $500.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular20.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 12 Pro.jpe" alt="iPhone 12 Pro"></div>
+          <h3>iPhone 12 Pro</h3>
+          <p class="precio">Desde $699.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular21.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 13 Pro.jpe" alt="iPhone 13 Pro"></div>
+          <h3>iPhone 13 Pro</h3>
+          <p class="precio">Desde $799.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular22.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 14 Pro.jpe" alt="iPhone 14 Pro"></div>
+          <h3>iPhone 14 Pro</h3>
+          <p class="precio">Desde $899.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular23.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 15 Pro.jpe" alt="iPhone 15 Pro"></div>
+          <h3>iPhone 15 Pro</h3>
+          <p class="precio">Desde $910.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular24.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 16 Pro.jpe" alt="iPhone 16 Pro"></div>
+          <h3>iPhone 16 Pro</h3>
+          <p class="precio">Desde $950.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular25.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 17 Pro.jpe" alt="iPhone 17 Pro"></div>
+          <h3>iPhone 17 Pro</h3>
+          <p class="precio">Desde $1,400.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular26.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/iPhone 12 Mini.jpe" alt="iPhone 12 mini"></div>
+          <h3>iPhone 12 mini</h3>
+          <p class="precio">Desde $210.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular27.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <!-- 27 productos por categoría -->
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A02.jpe" alt="Samsung Galaxy A02"></div>
+          <h3>Samsung Galaxy A02</h3>
+          <p class="precio">Desde $40.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular28.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A03.jpe" alt="Samsung Galaxy A03"></div>
+          <h3>Samsung Galaxy A03</h3>
+          <p class="precio">Desde $80.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular29.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A04.jpe" alt="Samsung Galaxy A04"></div>
+          <h3>Samsung Galaxy A04</h3>
+          <p class="precio">Desde $99.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular30.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A05.jpe" alt="Samsung Galaxy A05"></div>
+          <h3>Samsung Galaxy A05</h3>
+          <p class="precio">Desde $110.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular31.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A06.jpe" alt="Samsung Galaxy A06"></div>
+          <h3>Samsung Galaxy A06</h3>
+          <p class="precio">Desde $120.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular32.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A07.jpe" alt="Samsung Galaxy A07"></div>
+          <h3>Samsung Galaxy A07</h3>
+          <p class="precio">Desde $130.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular33.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A10.jpe" alt="Samsung Galaxy A10"></div>
+          <h3>Samsung Galaxy A10</h3>
+          <p class="precio">Desde $145.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular34.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A11.jpe" alt="Samsung Galaxy A11"></div>
+          <h3>Samsung Galaxy A11</h3>
+          <p class="precio">Desde $155.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular35.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A12" alt="Samsung Galaxy A12"></div>
+          <h3>Samsung Galaxy A12</h3>
+          <p class="precio">Desde $170.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular36.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <!-- 36 productos por categoría -->
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung galaxy A13.jpe" alt="Samsung Galaxy A13"></div>
+          <h3>Samsung Galaxy A13</h3>
+          <p class="precio">Desde $200.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular37.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A14.jpe" alt="Samsung Galaxy A14"></div>
+          <h3>Samsung Galaxy A14</h3>
+          <p class="precio">Desde $220.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular38.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A15.jpe" alt="Samsung Galaxy A15"></div>
+          <h3>Samsung Galaxy A15</h3>
+          <p class="precio">Desde $230.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular39.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A16.jpe" alt="Samsung Galaxy A16"></div>
+          <h3>Samsung Galaxy A16</h3>
+          <p class="precio">Desde $250.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular40.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A17.jpe" alt="Samsung Galaxy A17"></div>
+          <h3>Samsung Galaxy A17</h3>
+          <p class="precio">Desde $270.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular41.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A20.jpe" alt="Samsung Galaxy A20"></div>
+          <h3>Samsung Galaxy A20</h3>
+          <p class="precio">Desde $80.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular42.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A21.jpe" alt="Samsung Galaxy A21"></div>
+          <h3>Samsung Galaxy A21</h3>
+          <p class="precio">Desde $90.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular43.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A22.jpe" alt="Samsung Galaxy A22"></div>
+          <h3>Samsung Galaxy A22</h3>
+          <p class="precio">Desde $100.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular44.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A23.jpe" alt="Samsung Galaxy A23"></div>
+          <h3>Samsung Galaxy A23</h3>
+          <p class="precio">Desde $115.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular45.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <!-- 45 productos por categoría -->
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A24.jpe" alt="Samsung Galaxy A24"></div>
+          <h3>Samsung Galaxy A24</h3>
+          <p class="precio">Desde $180.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular46.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A25.jpe" alt="Samsung Galaxy A25"></div>
+          <h3>Samsung Galaxy A25</h3>
+          <p class="precio">Desde $210.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular47.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A26.jpe" alt="Samsung Galaxy A26"></div>
+          <h3>Samsung Galaxy A26</h3>
+          <p class="precio">Desde $240.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular48.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy A27.jpe" alt="Samsung Galaxy A27"></div>
+          <h3>Samsung Galaxy A27</h3>
+          <p class="precio">Desde $340.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular49.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy M35.jpe" alt="Samsung Galaxy M35"></div>
+          <h3>Samsung Galaxy M35</h3>
+          <p class="precio">Desde $155.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular50.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy M36.jpe" alt="Samsung Galaxy M36"></div>
+          <h3>Samsung Galaxy M36</h3>
+          <p class="precio">Desde $260.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular51.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy M51" alt="Samsung Galaxy M51"></div>
+          <h3>Samsung Galaxy M51</h3>
+          <p class="precio">Desde $180.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular52.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy M54.jpe" alt="Samsung Galaxy M54"></div>
+          <h3>Samsung Galaxy M54</h3>
+          <p class="precio">Desde $210.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular53.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy M55s.jpe" alt="Samsung Galaxy M55s"></div>
+          <h3>Samsung Galaxy M55s</h3>
+          <p class="precio">Desde $275.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular54.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <!-- 54 productos por categoría -->
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy M56.jpe" alt="Samsung Galaxy M56"></div>
+          <h3>Samsung Galaxy M56</h3>
+          <p class="precio">Desde $290.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular55.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy M62" alt="Samsung Galaxy M62"></div>
+          <h3>Samsung Galaxy M62</h3>
+          <p class="precio">Desde $155.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular56.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Samsung Galaxy F70 Pro.jpe" alt="Samsung Galaxy F70 Pro"></div>
+          <h3>Samsung Galaxy F70 Pro</h3>
+          <p class="precio">Desde $390.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular57.html" class="btn-info">Información</a>
+          </div>
+        </article>
+               
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi Note 10.jpe" alt="Redmi Note 10"></div>
+          <h3>Redmi Note 10</h3>
+          <p class="precio">Desde $110.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular58.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi Note 11.jpe" alt="Redmi Note 11"></div>
+          <h3>Redmi Note 11</h3>
+          <p class="precio">Desde $120.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular59.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi Note 12" alt="Redmi Note 12"></div>
+          <h3>Redmi Note 12</h3>
+          <p class="precio">Desde $135.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular60.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi Note 13.jpe" alt="Redmi Note 13"></div>
+          <h3>Redmi Note 13</h3>
+          <p class="precio">Desde $185.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular61.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi Note 14.jpe" alt="Redmi Note 14"></div>
+          <h3>Redmi Note 14</h3>
+          <p class="precio">Desde $210.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular62.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi Note 15.jpe" alt="Redmi Note 15"></div>
+          <h3>Redmi Note 15</h3>
+          <p class="precio">Desde $250.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular63.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi 10C.jpe" alt="Redmi 10C"></div>
+          <h3>Redmi 10C</h3>
+          <p class="precio">Desde $85.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular64.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi 12C.jpe" alt="Redmi 12C"></div>
+          <h3>Redmi 12C</h3>
+          <p class="precio">Desde $95.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular65.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi 13C.jpe" alt="Redmi 13C"></div>
+          <h3>Redmi 13C</h3>
+          <p class="precio">Desde $150.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular66.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi 14C.jpe" alt="Redmi 14C"></div>
+          <h3>Redmi 14C</h3>
+          <p class="precio">Desde $200.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular67.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi 15C.jpe" alt="Redmi 15C"></div>
+          <h3>Redmi 15C</h3>
+          <p class="precio">Desde $220.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular68.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <!-- Hasta aca hay 69 -->
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi 17 C.jpe" alt="Redmi 17C"></div>
+          <h3>Redmi 17C</h3>
+          <p class="precio">Desde $245.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular69.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi K50Pro.jpe" alt="Redmi K50 Pro"></div>
+          <h3>Redmi K50 Pro</h3>
+          <p class="precio">Desde $350.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular70.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi K60 Pro.jpe" alt="Redmi K60 Pro"></div>
+          <h3>Redmi K60 Pro</h3>
+          <p class="precio">Desde $500.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular71.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi K70 Pro.jpe" alt="Redmi K70 Pro"></div>
+          <h3>Redmi K70 Pro</h3>
+          <p class="precio">Desde $550.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular72.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi K80 Pro.jpe" alt="Redmi K80 Pro"></div>
+          <h3>Redmi K80 Pro</h3>
+          <p class="precio">Desde $650.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular73.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi K90Pro.jpe" alt="Redmi K90 Pro"></div>
+          <h3>Redmi K90 Pro</h3>
+          <p class="precio">Desde $750.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular74.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Redmi K100 Pro.png" alt="Redmi K100 Pro"></div>
+          <h3>Redmi K100 Pro</h3>
+          <p class="precio">Desde $645.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular75.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Infinix Zero X Pro.jpe" alt="Infinix Zero X Pro"></div>
+          <h3>Infinix Zero X Pro</h3>
+          <p class="precio">Desde $200.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular76.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Infinix Zero Ultra.jpe" alt="Infinix Zero Ultra"></div>
+          <h3>Infinix Zero Ultra</h3>
+          <p class="precio">Desde $520.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular77.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Infinix Zero 20.jpe" alt="Infinix Zero 20"></div>
+          <h3>Infinix Zero 20</h3>
+          <p class="precio">Desde $270.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular78.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Infinix Zero 30.webp" alt="Infinix Zero 30"></div>
+          <h3>Infinix Zero 30</h3>
+          <p class="precio">Desde $320.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular79.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Infinix Zero 40.jpe" alt="Infinix Zero 40"></div>
+          <h3>Infinix Zero 40</h3>
+          <p class="precio">Desde $390.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular80.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Infinix Zero Flip.webp" alt="Infinix Zero Flip"></div>
+          <h3>Infinix Zero Flip</h3>
+          <p class="precio">Desde $600.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular81.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Infinix Note 11 Pro.jpe" alt="Infinix Note 11 Pro"></div>
+          <h3>Infinix Note 11 Pro</h3>
+          <p class="precio">Desde $200.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular82.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Infinix Note 12 Pro.jpe" alt="Infinix Note 12 Pro"></div>
+          <h3>Infinix Note 12 Pro</h3>
+          <p class="precio">Desde $230.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular83.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Infinix Note 30 Pro.jpe" alt="Infinix Note 30 Pro"></div>
+          <h3>Infinix Note 30 Pro</h3>
+          <p class="precio">Desde $250.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular84.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Infinix Note 40 Pro.jpe" alt="Infinix Note 40 Pro"></div>
+          <h3>Infinix Note 40 Pro</h3>
+          <p class="precio">Desde $275.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular85.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Infinix Note 50 Pro.jpe" alt="Infinix Note 50 Pro"></div>
+          <h3>Infinix Note 50 Pro</h3>
+          <p class="precio">Desde $300.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular86.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Infinix Note 60 Pro.jpe" alt="Infinix Note 60 Pro"></div>
+          <h3>Infinix Note 60 Pro</h3>
+          <p class="precio">Desde $350.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular87.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/HONOR Magic V2.jpe" alt="Honor Magic V2"></div>
+          <h3>Honor Magic V2</h3>
+          <p class="precio">Desde $2,00.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular88.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/HONOR Magic V3.jpe" alt="Honor Magic V3"></div>
+          <h3>Honor Magic V3</h3>
+          <p class="precio">Desde $1,900.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular89.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/HONOR Magic V6.jpe" alt="Honor Magic V6"></div>
+          <h3>Honor Magic V6</h3>
+          <p class="precio">Desde $2,100.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular90.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/HONOR Magic V Flip.jpe" alt="Honor Magic V Flip"></div>
+          <h3>Honor Magic V Flip</h3>
+          <p class="precio">Desde $999.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular91.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/HONOR Magic 6 RSR Porsche Design.jpe" alt="Honor Magic 6 RSR Porsche Design"></div>
+          <h3>Honor Magic 6 RSR Porsche Design</h3>
+          <p class="precio">Desde $2,100.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular92.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/HONOR Magic 7 RSR Porsche Design.jpe" alt="Honor Magic 7 RSR Porsche Design"></div>
+          <h3>Honor Magic 7 RSR Porsche Design</h3>
+          <p class="precio">Desde $2,200.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular93.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Honor 80 Pro.jpe" alt="Honor 80 Pro"></div>
+          <h3>Honor 80 Pro</h3>
+          <p class="precio">Desde $570.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular94.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/HONOR 90 Pro.jpe" alt="Honor 90 Pro"></div>
+          <h3>Honor 90 Pro</h3>
+          <p class="precio">Desde $550.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular95.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Honor 100 Pro.jpe" alt="Honor 100 Pro"></div>
+          <h3>Honor 100 Pro</h3>
+          <p class="precio">Desde $620.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular96.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Honor 200 Pro" alt="Honor 200 Pro"></div>
+          <h3>Honor 200 Pro</h3>
+          <p class="precio">Desde $870.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular97.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Honor 300 Pro.jpe" alt="Honor 300 Pro"></div>
+          <h3>Honor 300 Pro</h3>
+          <p class="precio">Desde $585.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular98.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/HONOR 400 Pro.jpe" alt="Honor 400 Pro"></div>
+          <h3>Honor 400 Pro</h3>
+          <p class="precio">Desde $1,070.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular99.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/HONOR 600 Pro.jpe" alt="Honor 600 Pro"></div>
+          <h3>Honor 600 Pro</h3>
+          <p class="precio">Desde $1,335.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Celulares/celular100.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: COMPUTADORAS -->
+    <section id="computadoras" class="categoria-seccion">
+      <h2 class="titulo-categoria">Computadoras</h2>
+      <div class="grid-productos">
+       <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MacBook Air M2 Space Gray.jpe" alt="MacBook Air"></div>
+          <h3>MacBook Air M2</h3>
+          <p class="precio">Desde $1,000.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu1.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MacBook Air 13.jpe" alt="MacBook Air"></div>
+          <h3>MacBook Air 13</h3>
+          <p class="precio">Desde $1,549.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu2.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MacBook Air 15.jpe" alt="MacBook Air"></div>
+          <h3>MacBook Air 15</h3>
+          <p class="precio">Desde $1,759.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu3.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MacBook Pro 14 M1.jpe" alt="MacBook Air"></div>
+          <h3>MacBook Pro 14 M1</h3>
+          <p class="precio">Desde $850.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu4.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MacBook Pro 4 M4.jpe" alt="MacBook Air"></div>
+          <h3>MacBook Pro 4 M4</h3>
+          <p class="precio">Desde $1,599.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu5.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MacBook Pro Retina 13.jpe" alt="MacBook Air"></div>
+          <h3>MacBook Pro Retina 13</h3>
+          <p class="precio">Desde $300.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu6.html".html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MacBook Neo 13.jpe" alt="MacBook Air"></div>
+          <h3>MacBook Neo 13</h3>
+          <p class="precio">Desde $800.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu7.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MacBook Pro 13 M2.jpe" alt="MacBook Air"></div>
+          <h3>MacBook Pro 13 M2</h3>
+          <p class="precio">Desde $1,599.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu8.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MacBook Pro 16 M5.jpe" alt="MacBook Air"></div>
+          <h3>MacBook Pro 16 M5</h3>
+          <p class="precio">Desde $3,500.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu9.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/ASUS ROG Gaming Laptop _ Refined Neon Power.jpg" alt="MacBook Air"></div>
+          <h3>ASUS ROG Gaming Laptop</h3>
+          <p class="precio">Desde $3,750.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu10.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Huawei MateBook.jpg" alt="MacBook Air"></div>
+          <h3>Huawei MateBook</h3>
+          <p class="precio">Desde $850.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu11.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/HP 17.3' FHD.jpg" alt="MacBook Air"></div>
+          <h3>HP 17.3" FHD</h3>
+          <p class="precio">Desde $1,299.99</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu12.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/HP OmniBook Ultra Flip.jpg" alt="MacBook Air"></div>
+          <h3>HP OmniBook Ultra Flip</h3>
+          <p class="precio">Desde $1,699.99</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu13.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Acer Predator Helios Neo 18 AI - Laptop.jpg" alt="MacBook Air"></div>
+          <h3>Acer Predator Helios Neo 18 AI</h3>
+          <p class="precio">Desde $2,799.99 </p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu14.html" class="btn-info">Información</a>
+          </div>
+        </article> 
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Acer Predator Helios 300.jpg " alt="MacBook Air"></div>
+          <h3>Acer Predator Helios 300</h3>
+          <p class="precio">Desde $1,261.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu15.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Acer Aspire Go 15.jpg" alt="MacBook Air"></div>
+          <h3>Acer Aspire Go 15</h3>
+          <p class="precio">Desde $850.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu16.html" class="btn-info">Información</a> 
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Acer Aspire Lite 15.jpg" alt="MacBook Air"></div>
+          <h3>Acer Aspire Lite 15</h3>
+          <p class="precio">Desde $949.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu17.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Acer Aspire 5.jpg" alt="MacBook Air"></div>
+          <h3>Acer Aspire 5</h3>
+          <p class="precio">Desde $840.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu18.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Acer Aspire 3.jpg" alt="MacBook Air"></div>
+          <h3>Acer Aspire 3</h3>
+          <p class="precio">Desde $650.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu19.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Acer Swif 3.jpg" alt="MacBook Air"></div>
+          <h3>Acer Swift 3 SF316‑51</h3>
+          <p class="precio">Desde $750.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu20.html" class="btn-info">Información</a>
+          </div>
+        </article>
+        
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Acer Swif Go 14.jpg" alt="MacBook Air"></div>
+          <h3>Acer Swift Go 14</h3>
+          <p class="precio">Desde $1,050.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu21.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/HP Pavilion 14.jpg" alt="MacBook Air"></div>
+          <h3>HP Pavilion 14" 2‑in‑1 Touchscreen FHD Laptop</h3>
+          <p class="precio">Desde $650.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu22.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/HP Pavilion 15 dk1514.jpg" alt="MacBook Air"></div>
+          <h3>HP Pavilion 15‑dk1514TX Gaming Laptop</h3>
+          <p class="precio">Desde $870.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu23.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/HP EliteBook 8.jpg" alt="MacBook Air"></div>
+          <h3> HP EliteBook 8 </h3>
+          <p class="precio">Desde $2,000.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu24.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/HP EliteBook 745 G5.jpg" alt="MacBook Air"></div>
+          <h3>HP EliteBook 745 G5 (Refurbished)</h3>
+          <p class="precio">Desde $850.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu25.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/HP EliteBook 840 G11.jpg" alt="MacBook Air"></div>
+          <h3>HP EliteBook 840 G11</h3>
+          <p class="precio">Desde $1,600.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu26.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/HP EliteBook 840 G7.jpg" alt="MacBook Air"></div>
+          <h3>HP EliteBook 840 G7</h3>
+          <p class="precio">Desde $850.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu27.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/HP ProBook 450 G10.jpg" alt="MacBook Air"></div>
+          <h3>HP ProBook 450 G10 Business Laptop </h3>
+          <p class="precio">Desde $1,050.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu28.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/HP EliteBook Light Gaming.jpg" alt="MacBook Air"></div>
+          <h3>HP EliteBook Light Gaming Laptop </h3>
+          <p class="precio">Desde $950.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu29.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/HP EliteBook X G1i 14.jpg" alt="MacBook Air"></div>
+          <h3>HP EliteBook X G1i, 14</h3>
+          <p class="precio">Desde $2,300.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu30.html" class="btn-info">Información</a>
+          </div>
+        </article>
+        
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Razer Blade de 18.jpg" alt="MacBook Air"></div>
+          <h3>Razer Blade 18 Gaming Laptop</h3>
+          <p class="precio">Desde $4,150.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu31.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Razer Blade 14.jpg" alt="MacBook Air"></div>
+          <h3>Razer Blade 14 Gaming Laptop</h3>
+          <p class="precio">Desde $2,600.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu32.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Razer Blade 16.jpg" alt="MacBook Air"></div>
+          <h3>Razer Blade 16 OLED Gaming Laptop</h3>
+          <p class="precio">Desde $4,200.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu33.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Samsung Galaxy Book2.jpg" alt="MacBook Air"></div>
+          <h3>Samsung Galaxy Book2</h3>
+          <p class="precio">Desde $950.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu34.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Samsung Galaxy Book4.jpg" alt="MacBook Air"></div>
+          <h3>Samsung Galaxy Book4 Pro Series</h3>
+          <p class="precio">Desde $1,650.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu35.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Samsung Galaxy Book6.jpg" alt="MacBook Air"></div>
+          <h3>Samsung Galaxy Book6 </h3>
+          <p class="precio">Desde $1,800.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu36.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Samsung Galaxy Book5.jpg" alt="MacBook Air"></div>
+          <h3>Samsung Galaxy Book5 Pro</h3>
+          <p class="precio">Desde $1,900.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu37.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo ThinkPad E14.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo ThinkPad E14</h3>
+          <p class="precio">Desde $950.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu38.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo ThinkPad E15.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo ThinkPad E15</h3>
+          <p class="precio">Desde $700.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu39.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo ThinkPad T16.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo ThinkPad T16</h3>
+          <p class="precio">Desde $1,900.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu40.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo ThinkPad T14s.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo ThinkPad T14s</h3>
+          <p class="precio">Desde $1,750.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu41.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo ThinkPad X1.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo ThinkPad X1 Carbon Gen 13</h3>
+          <p class="precio">Desde $2,500.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu42.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo IdeaPad 5 2in1.jpg " alt="MacBook Air"></div>
+          <h3>Lenovo IdeaPad 5 2‑in‑1</h3>
+          <p class="precio">Desde $1,600.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu43.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo IdeaPad Slim 3.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo IdeaPad Slim 3 15AMN8</h3>
+          <p class="precio">Desde $650.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu44.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo IdeaPad Pro 5.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo IdeaPad Pro 5</h3>
+          <p class="precio">Desde $1,600.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu45.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo IdeaPad Slim 5x.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo IdeaPad Slim 5x</h3>
+          <p class="precio">Desde $1,150.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu46.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo Legion 5 Pro.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo Legion 5 Pro</h3>
+          <p class="precio">Desde $2,000.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu47.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo Legion 7.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo Legion 7</h3>
+          <p class="precio">Desde $2,160.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu48.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo LOQ 15IRX10.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo LOQ 15IRX10 Gaming Laptop</h3>
+          <p class="precio">Desde $1,650.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu49.html" class="btn-info">Información</a>
+          </div>
+        </article>
+        
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo Yoga Slim 7.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo Yoga Slim 7</h3>
+          <p class="precio">Desde $2,000.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu50.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo Yoga Pro 9i.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo Yoga Pro 9i Aura Edition</h3>
+          <p class="precio">Desde $2,350.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu51.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo Yoga 5G.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo Yoga 5G</h3>
+          <p class="precio">Desde $650.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu52.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Lenovo ThinkPad Yoga 11E.jpg" alt="MacBook Air"></div>
+          <h3>Lenovo ThinkPad Yoga 11E</h3>
+          <p class="precio">Desde $350.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu53.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/ASUS Zenbook S14 OLED.jpg" alt="MacBook Air"></div>
+          <h3>ASUS Zenbook S14 OLED</h3>
+          <p class="precio">Desde $1,940.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu54.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/ASUS ZenBook 13.jpg" alt="MacBook Air"></div>
+          <h3>ASUS ZenBook 13</h3>
+          <p class="precio">Desde $500.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu55.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Microsoft Surface 7.jpg" alt="MacBook Air"></div>
+          <h3>Microsoft Surface Laptop 7</h3>
+          <p class="precio">Desde $1,150.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu56.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Microsoft Surface 3.jpg" alt="MacBook Air"></div>
+          <h3>Microsoft Surface Laptop 3</h3>
+          <p class="precio">Desde $600.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu57.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Surface Laptop 8th Edition.jpg" alt="MacBook Air"></div>
+          <h3>Surface Laptop 8th Edition</h3>
+          <p class="precio">Desde $1,550.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu58.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Microsoft Surface Laptop 4.jpg" alt="MacBook Air"></div>
+          <h3>Microsoft Surface Laptop 4</h3>
+          <p class="precio">Desde $650.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu59.html" class="btn-info">Información</a>
+          </div>
+        </article>
+        
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Microsoft Surface Book 2.jpg" alt="MacBook Air"></div>
+          <h3>Microsoft Surface Book 2</h3>
+          <p class="precio">Desde $850.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu60.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/HUAWEI MateBook X Pro.jpg" alt="MacBook Air"></div>
+          <h3>HUAWEI MateBook X Pro</h3>
+          <p class="precio">Desde $2,100.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu61.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Huawei MateBook D16.jpg" alt="MacBook Air"></div>
+          <h3>Huawei MateBook D16</h3>
+          <p class="precio">Desde $1,150.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu62.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Huawei MateBook D14.jpg" alt="MacBook Air"></div>
+          <h3>Huawei MateBook D14</h3>
+          <p class="precio">Desde $800.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu63.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Huawei MateBook 13.jpg" alt="MacBook Air"></div>
+          <h3>Huawei MateBook 13</h3>
+          <p class="precio">Desde $550.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu64.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Fujitsu LIFEBOOK.jpg" alt="MacBook Air"></div>
+          <h3>Fujitsu LIFEBOOK</h3>
+          <p class="precio">Desde $450.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu65.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/LG gram Pro 17.jpg" alt="MacBook Air"></div>
+          <h3>LG gram Pro 17</h3>
+          <p class="precio">Desde $2,300.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu66.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/LG gram 16.jpg" alt="MacBook Air"></div>
+          <h3>LG gram 16</h3>
+          <p class="precio">Desde $1,650.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu67.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/LG gram Style 14.jpg" alt="MacBook Air"></div>
+          <h3>LG gram Style 14</h3>
+          <p class="precio">Desde $1,450.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu68.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Xiaomi Mi Notebook Pro 15.6.jpg" alt="MacBook Air"></div>
+          <h3>Xiaomi Mi Notebook Pro 15.6</h3>
+          <p class="precio">Desde $550.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu69.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Xiaomi Mi Notebook Air 13.3.jpg" alt="MacBook Air"></div>
+          <h3>Xiaomi Mi Notebook Air 13.3</h3>
+          <p class="precio">Desde $420.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu70.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+    <!-- Aqui faltan-->
+
+    <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Xiaomi Redmi Book 16.14.jpg" alt="MacBook Air"></div>
+          <h3>Xiaomi Redmi Book 16/14</h3>
+          <p class="precio">Desde $900.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu71.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Xiaomi RedmiBook Pro 15.jpg" alt="MacBook Air"></div>
+          <h3>Xiaomi RedmiBook Pro 15</h3>
+          <p class="precio">Desde $700.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu72.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Honor MagicBook Art 14.jpg" alt="MacBook Air"></div>
+          <h3>Honor MagicBook Art 14</h3>
+          <p class="precio">Desde $1,350.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu73.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/HONOR MagicBook X16.jpg" alt="MacBook Air"></div>
+          <h3>HONOR MagicBook X16</h3>
+          <p class="precio">Desde $550.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu74.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Honor-Magicbook 14Pro.png" alt="MacBook Air"></div>
+          <h3>Honor MagicBook 14 Pro</h3>
+          <p class="precio">Desde $1,050.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu75.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MSI Stealth 16AI.jpg" alt="MacBook Air"></div>
+          <h3>MSI Stealth 16AI</h3>
+          <p class="precio">Desde $2,500.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu76.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MSI Stealth 15M.jpg" alt="MacBook Air"></div>
+          <h3>MSI Stealth 15M</h3>
+          <p class="precio">Desde $1,050.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu77.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MSI Titan 18.jpg" alt="MacBook Air"></div>
+          <h3>MSI Titan 18</h3>
+          <p class="precio">Desde $3,000.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu78.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MSI Creator Z16 HX.jpg" alt="MacBook Air"></div>
+          <h3>MSI Creator Z16 HX</h3>
+          <p class="precio">Desde $2,300.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu79.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MSI Creator 17M.jpg" alt="MacBook Air"></div>
+          <h3>MSI Creator 17M</h3>
+          <p class="precio">Desde $950.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu80.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MSI Creator 15.jpg" alt="MacBook Air"></div>
+          <h3>MSI Creator 15</h3>
+          <p class="precio">Desde $1,300.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu81.html" class="btn-info">Información</a>
+          </div>
+        </article>
+        
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MSI Creator M14.jpg" alt="MacBook Air"></div>
+          <h3>MSI Creator M14</h3>
+          <p class="precio">Desde $1,850.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu82.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MSI Modern 15 A10M‑242.jpg" alt="MacBook Air"></div>
+          <h3>MSI Modern 15 A10M‑242</h3>
+          <p class="precio">Desde $500.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu83.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/MSI Modern 14.jpg" alt="MacBook Air"></div>
+          <h3>MSI Modern 14</h3>
+          <p class="precio">Desde $550.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu84.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Dell XPS 16.jpg" alt="MacBook Air"></div>
+          <h3>Dell XPS 16</h3>
+          <p class="precio">Desde $2,000.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu85.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Dell XPS 13.jpg" alt="MacBook Air"></div>
+          <h3>Dell XPS 13</h3>
+          <p class="precio">Desde $550.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu86.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Dell XPS 15.jpg" alt="MacBook Air"></div>
+          <h3>Dell XPS 15</h3>
+          <p class="precio">Desde $1,000.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu87.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/XPS 14 Laptop.jpg" alt="MacBook Air"></div>
+          <h3>XPS 14 Laptop</h3>
+          <p class="precio">Desde $1,800.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu88.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Dell Inspiron 14 2‑in‑1.jpg" alt="MacBook Air"></div>
+          <h3>Dell Inspiron 14 2‑in‑1</h3>
+          <p class="precio">Desde $1,150.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu89.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Dell Inspiron 15.6.jpg" alt="MacBook Air"></div>
+          <h3>Dell Inspiron 15.6</h3>
+          <p class="precio">Desde $850.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu90.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Dell Latitude 5440.jpg" alt="MacBook Air"></div>
+          <h3>Dell Latitude 5440</h3>
+          <p class="precio">Desde $1,250.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu91.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Dell Latitude 3420.jpg" alt="MacBook Air"></div>
+          <h3>Dell Latitude 3420</h3>
+          <p class="precio">Desde $700.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu92.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+        <div class="img-box"><img src="../IMG/Dell Latitude 7440.jpg" alt="MacBook Air"></div>
+          <h3>Dell Latitude 7440</h3>
+          <p class="precio">Desde $1,100.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu93.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Dell Alienware 16X.jpg" alt="MacBook Air"></div>
+          <h3>Dell Alienware 16X</h3>
+          <p class="precio">Desde $2,500.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu94.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Dell Alienware 18.jpg" alt="MacBook Air"></div>
+          <h3>Dell Alienware 18</h3>
+          <p class="precio">Desde $3,000.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu95.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Dell Alienware M17 R2.jpg" alt="MacBook Air"></div>
+          <h3>Dell Alienware M17 R2</h3>
+          <p class="precio">Desde $900.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu96.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Dynabook Portégé X30L.jpg" alt="MacBook Air"></div>
+          <h3>Dynabook Portégé X30L</h3>
+          <p class="precio">Desde $1,350.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu97.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Dynabook Tecra A50‑K.jpg" alt="MacBook Air"></div>
+          <h3>Dynabook Tecra A50‑K</h3>
+          <p class="precio">Desde $1,100.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu98.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+         <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Dynabook Satellite Pro C50‑J‑11A.jpg" alt="MacBook Air"></div>
+          <h3>Satellite Pro C50‑J‑11A</h3>
+          <p class="precio">Desde $420.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu99.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/Dell Alienware 15.jpg" alt="MacBook Air"></div>
+          <h3>Dell Alienware 15</h3>
+          <p class="precio">Desde $1,500.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/Computadoras/compu100.html" class="btn-info">Información</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: TABLETS -->
+    <section id="tablets" class="categoria-seccion">
+      <h2 class="titulo-categoria">Tablets</h2>
+      <div class="grid-productos">
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/iPad Air 2.jpe" alt="iPad Pro"></div>
+          <h3>iPad Air 2</h3>
+          <p class="precio">Desde $499.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 1.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/iPad Air 5.jpe" alt="iPad Pro"></div>
+          <h3>iPad Air 5</h3>
+          <p class="precio">Desde $599.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 2.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/iPad Mini 6.jpe" alt="iPad Pro"></div>
+          <h3>iPad Mini 6</h3>
+          <p class="precio">Desde $499.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 3.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/iPad Pro 10.5.jpe" alt="iPad Pro"></div>
+          <h3>iPad Pro 10.5</h3>
+          <p class="precio">Desde $650.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 4.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/iPad Pro 11 (2018).jpe" alt="iPad Pro"></div>
+          <h3>iPad Pro 11 </h3>
+          <p class="precio">Desde $799.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 5.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/iPad Pro 12.9.jpe" alt="iPad Pro"></div>
+          <h3>iPad Pro 12.9</h3>
+          <p class="precio">Desde $1,099.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 6.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/png10.png" alt="iPad Pro"></div>
+          <h3>iPad 11-A16</h3>
+          <p class="precio">Desde $600.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 7.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/png11.png" alt="iPad Pro"></div>
+          <h3>iPad Mini 7</h3>
+          <p class="precio">Desde $599.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 8.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/png13.png" alt="iPad Pro"></div>
+          <h3>iPad Air 13</h3>
+          <p class="precio">Desde $999.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 9.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto"> //empezar aquiii
+
+          <div class="img-box"><img src="../IMG/ipad10.jpg" alt="iPad Pro"></div>
+          <h3>iPad Pro 13</h3>
+          <p class="precio">Desde $1100.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 10.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/ipad11.jpg" alt="iPad Pro"></div>
+          <h3>iPad Pro 11</h3>
+          <p class="precio">Desde $899.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 11.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/ipad12.jpg" alt="iPad Pro"></div>
+          <h3>iPad Air 11</h3>
+          <p class="precio">Desde $699.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 12.html" class="btn-info">Información</a>
+
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/ipad13.jpg" alt="iPad Pro"></div>
+          <h3>iPad 11</h3>
+          <p class="precio">Desde $750.99</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 13.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/ipad14.jpg" alt="iPad Pro"></div>
+          <h3>iPad mini</h3>
+          <p class="precio">Desde $589.99</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 14.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/ipad15.jpg" alt="iPad Pro"></div>
+          <h3>iPad Air 13 M2</h3>
+          <p class="precio">Desde $1600.99</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 51.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/ipad16.jpg" alt="iPad Pro"></div>
+          <h3>iPad Air 11 M2</h3>
+          <p class="precio">Desde $850.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 16.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/ipad17.jpg" alt="iPad Pro"></div>
+          <h3>Pad 10.ª generación</h3>
+          <p class="precio">Desde $999.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html"class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 17.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/ipad18.jpg" alt="iPad Pro"></div>
+          <h3>iPad Pro 12.9</h3>
+          <p class="precio">Desde $789.99</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 18.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+
+          <div class="img-box"><img src="../IMG/ipad19.jpg" alt="iPad Pro"></div>
+          <h3>iPad Pro 11 M2</h3>
+          <p class="precio">Desde $999.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">comprar</a>
+            <a href="../HTML/iPad/iPad 19.html" class="btn-info">Información</a>
+          </div>
+        </article> 
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5: RELOJES -->
+    <section id="relojes" class="categoria-seccion">
+      <h2 class="titulo-categoria">Relojes</h2>
+      <div class="grid-productos">
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Apple Wacht SE.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch SE</h3>
+          <p class="precio">Desde $249</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog1.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+    <article class="card-producto">
+          <div class="img-box"><img src="../IMG/relog1.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 9</h3>
+          <p class="precio">Desde $399.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog2.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+    <article class="card-producto">
+          <div class="img-box"><img src="../IMG/relog2.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 8</h3>
+          <p class="precio">Desde $499.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog3.html" class="btn-info">Información</a>
+          </div>
+        </article>
+    
+
+    <article class="card-producto">
+          <div class="img-box"><img src="../IMG/relog3.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch SE 1</h3>
+          <p class="precio">Desde $279.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog4.html" class="btn-info">Información</a>
+          </div>
+        </article>
+    
+
+    <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Apple Watch Series 7.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 7</h3>
+          <p class="precio">Desde $399.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog5.html" class="btn-info">Información</a>
+          </div>
+        </article>
+  
+
+    <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Apple Watch Series 9 45mm Cellular _ Unlocked - Black _ Premium Refurbished.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 9</h3>
+          <p class="precio">Desde $429.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog6.html" class="btn-info">Información</a>
+          </div>
+        </article>
+    
+
+    <article class="card-producto">
+          <div class="img-box"><img src="../IMG/relogalgo.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch SE 2</h3>
+          <p class="precio">Desde $279.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog7.html" class="btn-info">Información</a>
+          </div>
+        </article>
+    
+
+    <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Restored Apple Watch Series SE (2022) (GPS + Cellular) 40mm Smartwatch with Aluminum Case with Sport Band Like New - Walmart_ca.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch SE 4</h3>
+          <p class="precio">Desde $189.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog8.html" class="btn-info">Información</a>
+          </div>
+        </article>
+    
+
+      <article class="card-producto">
+          <div class="img-box"><img src="../IMG/good watch.jpg" alt="Apple Watch"></div>
+          <h3>Fitness Tracker Circular D18 / Y68</h3>
+          <p class="precio">Desde $180.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog9.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog10.jpg" alt="Apple Watch"></div>
+          <h3>Bozlun Fitness Smartwatch</h3>
+          <p class="precio">Desde $200.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog10.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relo11.jpg" alt="Apple Watch"></div>
+          <h3>Smartwatch Circular Elegante</h3>
+          <p class="precio">Desde $200.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog11.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog12.jpg" alt="Apple Watch"></div>
+          <h3>Smart Band Rectangular Fashion</h3>
+          <p class="precio">Desde $150.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog12.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog13.jpg" alt="Apple Watch"></div>
+          <h3>Smartwatch Cuadrado con Llamadas</h3>
+          <p class="precio">Desde $130.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog13.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog14.jpg" alt="Apple Watch"></div>
+          <h3>Smartwatch Rugged Ultra Style</h3>
+          <p class="precio">Desde $140.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog14.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog15.jpg" alt="Apple Watch"></div>
+          <h3>Samsung Galaxy Watch</h3>
+          <p class="precio">Desde $180.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog15.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog16.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Ultra / Ultra 2</h3>
+          <p class="precio">Desde $799.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog16.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog17.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Ultra</h3>
+          <p class="precio">Desde $700.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog17.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog18.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Ultra 3</h3>
+          <p class="precio">Desde $750.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog18.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog19.jpg" alt="Apple Watch"></div>
+          <h3>Sanda Digital Smart</h3>
+          <p class="precio">Desde $250.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog19.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog20.jpg" alt="Apple Watch"></div>
+          <h3>Smartwatch Cuadrado Estilo Serie 8/9</h3>
+          <p class="precio">Desde $200.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog20.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog21.jpg" alt="Apple Watch"></div>
+          <h3>Xiaomi Smart Band 7 / 8</h3>
+          <p class="precio">Desde $150.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog21.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog22.jpg" alt="Apple Watch"></div>
+          <h3>Xiaomi Smart Band 8 / 9</h3>
+          <p class="precio">Desde $170.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog22.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog23.jpg" alt="Apple Watch"></div>
+          <h3>Samsung Galaxy Watch 6 / Watch 7</h3>
+          <p class="precio">Desde $250.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog23.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog24.jpg" alt="Apple Watch"></div>
+          <h3>Smartwatch Circular Femenino</h3>
+          <p class="precio">Desde $300.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog24.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog25.jpg" alt="Apple Watch"></div>
+          <h3>Smartwatch Estilo Apple Watch</h3>
+          <p class="precio">Desde $300.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog25.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog26.jpg" alt="Apple Watch"></div>
+          <h3>Amazfit Bip U / Bip U Pro</h3>
+          <p class="precio">Desde $150.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog26.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog27.jpg" alt="Apple Watch"></div>
+          <h3>Samsung Galaxy Watch Ultra</h3>
+          <p class="precio">Desde $649.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog27.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog28.jpg" alt="Apple Watch"></div>
+          <h3>Smartwatch Circular Minimalista</h3>
+          <p class="precio">Desde $200.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog28.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog29.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 1 / 2 / 3</h3>
+          <p class="precio">Desde $120.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog29.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog30.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 7 / 8</h3>
+          <p class="precio">Desde $300.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog30.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog31.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 6 / SE</h3>
+          <p class="precio">Desde $200.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog31.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog32.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 8 / 9</h3>
+          <p class="precio">Desde $450.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog32.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog33.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 10 / Series 9</h3>
+          <p class="precio">Desde $400.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog33.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog34.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 8 / 9</h3>
+          <p class="precio">Desde $550.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog34.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog35.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 10</h3>
+          <p class="precio">Desde $449.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog35.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog36.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Nike Edition</h3>
+          <p class="precio">Desde $250.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog36.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog37.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 7 / 8 / 9</h3>
+          <p class="precio">Desde $280.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog37.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog38.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 10</h3>
+          <p class="precio">Desde $399.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog38.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog39.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch SE/Series 8</h3>
+          <p class="precio">Desde $130.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog39.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog40.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 4 / 5 / 6</h3>
+          <p class="precio">Desde $200.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog40.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog41.jpg" alt="Apple Watch"></div>
+          <h3>Google Pixel Watch 2 / 3</h3>
+          <p class="precio">Desde $299.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog41.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog42.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Ultra 4</h3>
+          <p class="precio">Desde $749.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog42.html" class="btn-info">Información</a>
+          </div>
+      </article>
+
+      <article class="card-producto precio-oculto">
+          <div class="img-box"><img src="../IMG/relog43.jpg" alt="Apple Watch"></div>
+          <h3>Apple Watch Series 10</h3>
+          <p class="precio">Desde $399.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria relog/relog43.html" class="btn-info">Información</a>
+          </div>
+      </article>
+  </div>
+  </section>
+
+
+
+    <!-- SECCIÓN 6: ACCESORIOS -->
+    <section id="accesorios" class="categoria-seccion">
+      <h2 class="titulo-categoria">Accesorios</h2>
+      <div class="grid-productos">
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/acce1.jpg" alt="Apple Pencil"></div>
+          <h3>Cargador de Pared USB-C con Cable Incluido</h3>
+          <p class="precio">Desde $35.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria accesorios/acce1.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/acce2.jpg" alt="Apple Pencil"></div>
+          <h3>Batería Externa MagSafe</h3>
+          <p class="precio">Desde $80.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria accesorios/acce2.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/acce3.jpg" alt="Apple Pencil"></div>
+          <h3>Batería Magnética / Power Bank MagSafe Universal</h3>
+          <p class="precio">Desde $40.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria accesorios/acce3.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/acce4.jpg" alt="Apple Pencil"></div>
+          <h3>Estación de Carga Inalámbrica Multi-Dispositivo (3 en 1)</h3>
+          <p class="precio">Desde $60.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria accesorios/acce4.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/acce5.jpg" alt="Apple Pencil"></div>
+          <h3>Soporte Elevador Ajustable de Aluminio para Laptop</h3>
+          <p class="precio">Desde $45.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria accesorios/acce5.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/acce6.jpg" alt="Apple Pencil"></div>
+          <h3>Localizador AirTag con Llavero de Protección Belkin</h3>
+          <p class="precio">Desde $45.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria accesorios/acce6.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/acce7.jpg" alt="Apple Pencil"></div>
+          <h3>Power Bank de Gran Capacidad</h3>
+          <p class="precio">Desde $50.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria accesorios/acce7.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/acce8.jpg" alt="Apple Pencil"></div>
+          <h3>Lápiz Óptico Stylus (Apple Pencil)</h3>
+          <p class="precio">Desde $100.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria accesorios/acce8.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/acce9.jpg" alt="Apple Pencil"></div>
+          <h3>Ratón Inalámbrico (Apple Magic Mouse)</h3>
+          <p class="precio">Desde $80.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria accesorios/acce9.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/acce10.jpg" alt="Apple Pencil"></div>
+          <h3>Paño de Limpieza Pulidor (Apple Polishing Cloth)</h3>
+          <p class="precio">Desde $20.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="Productos categoria accesorios/acce10.html" class="btn-info">Información</a>
+          </div>
+        </article>
+    
+          <article class="card-producto">
+          <div class="img-box"><img src="../IMG/HomePod.jpe" alt="HomePod"></div>
+          <h3>HomePod</h3>
+          <p class="precio">Desde $130.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="../HTML/Accesorios/Accesorio1.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Cartera MagSafe.jpe" alt="Cartera MagSafe"></div>
+          <h3>Cartera MagSafe</h3>
+          <p class="precio">Desde $59.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="../HTML/Accesorios/Accesorio2.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Correa_deportiva.jpe" alt="Apple Pencil"></div>
+          <h3>Correa Deportiva</h3>
+          <p class="precio">Desde $40.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="../HTML/Accesorios/Accesorio3.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Correa de muñeca.jpe" alt="Correa de muñeca"></div>
+          <h3>Correa de muñeca</h3>
+          <p class="precio">Desde $30.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="../HTML/Accesorios/Accesorio4.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Organizador de viajes Bellroy.jpe" alt="Organizador de viajes Bellroy"></div>
+          <h3>Organizador de viajes Bellroy</h3>
+          <p class="precio">Desde $60.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="../HTML/Accesorios/Accesorio5.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Logitech Muse.jpe" alt="Logitech Muse"></div>
+          <h3>Logitech Muse</h3>
+          <p class="precio">Desde $130.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="../HTML/Accesorios/Accesorio6.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Magic Trackpad.jpe" alt="Magic Trackpad"></div>
+          <h3>Magic Trackpad </h3>
+          <p class="precio">Desde $129.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="../HTML/Accesorios/Accesorio7.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Teclado mágico.jpe" alt="Magic Keyboard"></div>
+          <h3>Magic Keyboard</h3>
+          <p class="precio">Desde $100.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="../HTML/Accesorios/Accesorio8.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Funda para iPad.jpe" alt="Funda para iPad"></div>
+          <h3>Funda para iPad</h3>
+          <p class="precio">Desde $80.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="../HTML/Accesorios/Accesorio9.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Funda con teclado táctil.jpe" alt="Funda con teclado táctil"></div>
+          <h3>Funda con teclado táctil para iPad</h3>
+          <p class="precio">Desde $230.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="../HTML/Accesorios/Accesorio10.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Funda de MacBook.jpe" alt="Funda para MacBook"></div>
+          <h3>Funda para MacBook</h3>
+          <p class="precio">Desde $100.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="../HTML/Accesorios/Accesorio11.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Protector de pantalla.jpe" alt="Protector de pantalla"></div>
+          <h3>Protector de pantalla de MacBook</h3>
+          <p class="precio">Desde $50.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="../HTML/Accesorios/Accesorio12.html" class="btn-info">Información</a>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <div class="img-box"><img src="../IMG/Soporte de carga inalámbrica.jpe" alt="Soporte de carga inalámbrica"></div>
+          <h3>Soporte de carga inalámbrica (4 en 1)</h3>
+          <p class="precio">Desde $180.00</p>
+          <div class="card-buttons">
+            <a href="Pago.html" class="btn-comprar">Agregar al carrito</a>
+            <a href="../HTML/Accesorios/Accesorio13.html" class="btn-info">Información</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contacto-section">
+    
+    <!-- Columna Izquierda: Información de Tecnoshop -->
+    <div class="info-tecnoshop">
+      <h2 class="tag-badge">CONOCE MÁS DE TECNOSHOP</h2>
+      <ul class="lista-interes">
+        <li><a href="#">Ver todos los modelos de Tecnoshop</a></li>
+        <li><a href="Soporte.html">Servicio al cliente</a></li>
+        <li><a href="campañas.html">Nuevas campañas</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna Derecha: Redes Sociales -->
+    <div class="redes-sociales">
+      <div class="box-badge">
+        <span>Contactanos en nuestras redes sociales</span>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/tecnoshop__sv?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" class="item-red" target="_blank" class="social-item">
+          <i class="fa-brands fa-instagram icon-social"></i>
+          <span class="handle">@tecnoshopoficial</span>
+        </a>
+
+        <a href="https://x.com" target="_blank" class="social-item">
+          <i class="fa-brands fa-x-twitter icon-social"></i>
+          <span class="handle">@tecnoshopoficial</span>
+        </a>
+
+        <a href="https://tiktok.com" target="_blank" class="social-item">
+          <i class="fa-brands fa-tiktok icon-social"></i>
+          <span class="handle">@tecnoshopoficial</span>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER  -->
+  <footer class="footer-sections">
+    
+    <!-- Columna 1: Información -->
+    <div class="footer-col">
+      <div class="col-header">Información</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="#">Quiénes somos</a></li>
+          <li><a href="#">Visión y Misión</a></li>
+          <li><a href="#">Historia</a></li>
+          <li><a href="#">Sucursales</a></li>
+          <li><a href="#">Servicios</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Columna 2: Categorías -->
+    <div class="footer-col">
+      <div class="col-header">Categorías</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="#">Celulares</a></li>
+          <li><a href="#">Computadoras</a></li>
+          <li><a href="#">Airpods</a></li>
+          <li><a href="#">Ipads</a></li>
+          <li><a href="#">Relojs inteligentes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Columna 3: Técnico -->
+    <div class="footer-col">
+      <div class="col-header">Técnico</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="#">Servicio al cliente</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Política de devoluciones y garantías</a></li>
+          <li><a href="#">Contáctenos</a></li>
+          <li><a href="#">Seguridad del sitio</a></li>
+          <li><a href="#">Política y Privacidad</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="../JS/carrito.js"></script>
+
+  <script src="JS/scritp.js"></script>
+
+  <script src="../JS/Producto.js"></script>
+</body>
+</html>

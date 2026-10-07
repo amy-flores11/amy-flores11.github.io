@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tecnoshop - Ofertas</title>
+    <link rel="stylesheet" href="../CSS/Ofertas.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    
+  <header class="navbar">
+    <div class="logo">Tecno shop</div>
+
+    <nav class="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="Producto.html">Producto</a>
+      <a href="Ofertas.html" class="active">Ofertas</a>
+      <a href="Soporte.html">Soporte</a>
+      <a href="Contacto.html">Contacto</a>
+
+      <button type="button" class="btn-carrito-nav nav-carrito-link" id="btnAbrirCarrito" onclick="toggleCarrito()">
+  <i class="fa-solid fa-cart-shopping"></i>
+  <span class="badge-contador" id="carrito-contador">0</span>
+</button>
+
+   
+    </button>
+
+    </nav>
+
+    <div class="user-session id="btn-login">
+    <a href="../HTML/login.html" class="user-session" id="btn-login">
+       <span class="material-symbols-outlined icon-user">account_circle</span>
+      <span id="texto-usuario">Iniciar sesión</span>
+    </a> 
+    </div>
+  </header>
+
+  <div class="overlay-carrito" id="overlayCarrito" onclick="toggleCarrito()"></div>
+
+<aside class="panel-carrito" id="panelCarrito">
+  <div class="carrito-header">
+    <h3>Mi Carrito (<span id="carrito-cant-total">0</span>)</h3>
+    <button type="button" class="btn-cerrar" onclick="toggleCarrito()">&times;</button>
+  </div>
+
+  <div class="carrito-items" id="carritoItems">
+  </div>
+
+  <div class="carrito-footer">
+    <div class="resumen-linea">
+      <span>Subtotal</span>
+      <strong id="carrito-subtotal">$0.00</strong>
+    </div>
+    <p class="envio-nota"><i class="fa-solid fa-truck-fast"></i> ¡Envío gratis aplicado!</p>
+    <button type="button" class="btn-checkout" onclick="procesarPago()">COMPRAR AHORA</button>
+  </div>
+</aside>
+
+<script src="/JS/carrito.js"></script>
+
+
+
+    <div class="encabezado-ofertas">
+     <h1>¡Ofertas!</h1>
+    </div>
+
+    <div class="contenedor-ofertas">
+   
+      <fieldset class="tarjeta-oferta">
+     <div class="info-tarjeta">
+      <h3>Set de Ecosistema Apple con Funda Negra y Accesorios</h3>
+      <p class="descuento">Hasta $20 de descuento</p>
+      <p class="precio-etiqueta">Desde <br> <strong>$120</strong></p>
+    </div>
+    <div class="caja-imagen">
+      <img src="/IMG/ofertas1.jpg" alt="Airpods 2da Gen">
+    </div>
+  </fieldset>
+
+  <fieldset class="tarjeta-oferta">
+     <div class="info-tarjeta">
+      <h3>Combo de Dispositivos Apple Matte Black</h3>
+      <p class="descuento">Hasta $15 de descuento</p>
+      <p class="precio-etiqueta">Desde <br> <strong>$150</strong></p>
+    </div>
+    <div class="caja-imagen">
+      <img src="/IMG/ofertas2.jpg" alt="Airpods 2da Gen">
+    </div>
+  </fieldset>
+
+  <fieldset class="tarjeta-oferta">
+     <div class="info-tarjeta">
+      <h3>Set de Apple Watch Silver con AirPods Inalámbricos</h3>
+      <p class="descuento">Hasta $30 de descuento</p>
+      <p class="precio-etiqueta">Desde <br> <strong>$180</strong></p>
+    </div>
+    <div class="caja-imagen">
+      <img src="/IMG/ofertas3.jpg" alt="Airpods 2da Gen">
+    </div>
+  </fieldset>
+
+  <fieldset class="tarjeta-oferta">
+     <div class="info-tarjeta">
+      <h3>Apple Watch Rose Gold con Correa de Cuero Rosa Delgada</h3>
+      <p class="descuento">Hasta $20 de descuento</p>
+      <p class="precio-etiqueta">Desde <br> <strong>$150</strong></p>
+    </div>
+    <div class="caja-imagen">
+      <img src="/IMG/ofertas4.jpg" alt="Airpods 2da Gen">
+    </div>
+  </fieldset>
+
+  <fieldset class="tarjeta-oferta">
+     <div class="info-tarjeta">
+      <h3>Base Soporte para Carga de Apple Watch</h3>
+      <p class="descuento">Hasta $25 de descuento</p>
+      <p class="precio-etiqueta">Desde <br> <strong>$15</strong></p>
+    </div>
+    <div class="caja-imagen">
+      <img src="/IMG/ofertas5.jpg" alt="Airpods 2da Gen">
+    </div>
+  </fieldset>
+
+  <fieldset class="tarjeta-oferta">
+     <div class="info-tarjeta">
+      <h3>Base de Carga Magnética Oficial / Dock Plano para Apple Watch</h3>
+      <p class="descuento">Hasta $10 de descuento</p>
+      <p class="precio-etiqueta">Desde <br> <strong>$29</strong></p>
+    </div>
+    <div class="caja-imagen">
+      <img src="/IMG/ofertas6.jpg" alt="Airpods 2da Gen">
+    </div>
+  </fieldset>
+
+  <fieldset class="tarjeta-oferta">
+     <div class="info-tarjeta">
+      <h3>Auriculares Over-Ear Apple AirPods Max</h3>
+      <p class="descuento">Hasta $100 de descuento</p>
+      <p class="precio-etiqueta">Desde <br> <strong>$450</strong></p>
+    </div>
+    <div class="caja-imagen">
+      <img src="/IMG/ofertas7.jpg" alt="Airpods 2da Gen">
+    </div>
+  </fieldset>
+
+  <fieldset class="tarjeta-oferta">
+     <div class="info-tarjeta">
+      <h3>Auriculares Over-Ear Apple AirPods Max</h3>
+      <p class="descuento">Hasta $100 de descuento</p>
+      <p class="precio-etiqueta">Desde <br> <strong>$450</strong></p>
+    </div>
+    <div class="caja-imagen">
+      <img src="/IMG/ofertas8.jpg" alt="Airpods 2da Gen">
+    </div>
+  </fieldset>
+
+  <fieldset class="tarjeta-oferta">
+     <div class="info-tarjeta">
+      <h3>Auriculares Inalámbricos AirPods</h3>
+      <p class="descuento">Hasta $40 de descuento</p>
+      <p class="precio-etiqueta">Desde <br> <strong>$130</strong></p>
+    </div>
+    <div class="caja-imagen">
+      <img src="/IMG/ofertas9.jpg" alt="Airpods 2da Gen">
+    </div>
+  </fieldset>
+
+  <fieldset class="tarjeta-oferta">
+     <div class="info-tarjeta">
+      <h3>AirPods de 3ª Generación con Estuche de Carga Inalámbrica</h3>
+      <p class="descuento">Hasta $30 de descuento</p>
+      <p class="precio-etiqueta">Desde <br> <strong>$130</strong></p>
+    </div>
+    <div class="caja-imagen">
+      <img src="/IMG/ofertas10.jpg" alt="Airpods 2da Gen">
+    </div>
+  </fieldset>
+
+</div>
+
+<section class="contacto-section">
+    
+    <!-- Columna Izquierda: Información de Tecnoshop -->
+    <div class="info-tecnoshop">
+      <h2 class="tag-badge">CONOCE MÁS DE TECNOSHOP</h2>
+      <ul class="lista-interes">
+        <li><a href="Producto.html">Ver todos los modelos de Tecnoshop</a></li>
+        <li><a href="Soporte.html">Servicio al cliente</a></li>
+        <li><a href="campañas.html">Nuevas campañas</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna Derecha: Redes Sociales -->
+    <div class="redes-sociales">
+      <div class="box-badge">
+        <span>Contactanos en nuestras redes sociales</span>
+      </div>
+
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank" class="social-item">
+          <i class="fa-brands fa-instagram icon-social"></i>
+          <span class="handle">@tecnoshopoficial</span>
+        </a>
+
+        <a href="https://x.com" target="_blank" class="social-item">
+          <i class="fa-brands fa-x-twitter icon-social"></i>
+          <span class="handle">@tecnoshopoficial</span>
+        </a>
+
+        <a href="https://tiktok.com" target="_blank" class="social-item">
+          <i class="fa-brands fa-tiktok icon-social"></i>
+          <span class="handle">@tecnoshopoficial</span>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER  -->
+  <footer class="footer-sections">
+    
+    <!-- Columna 1: Información -->
+    <div class="footer-col">
+      <div class="col-header">Información</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="#">Quiénes somos</a></li>
+          <li><a href="#">Visión y Misión</a></li>
+          <li><a href="#">Historia</a></li>
+          <li><a href="#">Sucursales</a></li>
+          <li><a href="#">Servicios</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Columna 2: Categorías -->
+    <div class="footer-col">
+      <div class="col-header">Categorías</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="#">Celulares</a></li>
+          <li><a href="#">Computadoras</a></li>
+          <li><a href="#">Airpods</a></li>
+          <li><a href="#">Ipads</a></li>
+          <li><a href="#">Relojs inteligentes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Columna 3: Técnico -->
+    <div class="footer-col">
+      <div class="col-header">Técnico</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="#">Servicio al cliente</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Política de devoluciones y garantías</a></li>
+          <li><a href="#">Contáctenos</a></li>
+          <li><a href="#">Seguridad del sitio</a></li>
+          <li><a href="#">Política y Privacidad</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+
+    

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Información General - Tecnoshop</title>
+  <link rel="stylesheet" href="/CSS/informaciongeneral.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+     <header class="navbar">
+    <div class="logo">Tecno shop</div>
+
+    <nav class="nav-links">
+      <a href="/index.html" class="active">Inicio</a>
+      <a href="HTML/Producto.html" >Producto</a>
+      <a href="HTML/Ofertas.html">Ofertas</a>
+      <a href="HTML/Soporte.html">Soporte</a>
+      <a href="HTML/Contacto.html">Contacto</a>
+
+      <button type="button" class="btn-carrito-nav" id="btnAbrirCarrito" onclick="toggleCarrito()">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span id="carrito-contador">0</span>
+    </button>
+
+    </nav>
+
+    <div class="user-session id="btn-login">
+    <a href="HTML/login.html" class="user-session" id="btn-login">
+       <span class="material-symbols-outlined icon-user">account_circle</span>
+      <span id="texto-usuario">Iniciar sesión</span>
+    </a> 
+    </div>
+  </header>
+
+  <div class="overlay-carrito" id="overlayCarrito" onclick="toggleCarrito()"></div>
+
+<aside class="panel-carrito" id="panelCarrito">
+  <div class="carrito-header">
+    <h3>Mi Carrito (<span id="carrito-cant-total">0</span>)</h3>
+    <button type="button" class="btn-cerrar" onclick="toggleCarrito()">&times;</button>
+  </div>
+
+  <div class="carrito-items" id="carritoItems">
+  </div>
+
+  <div class="carrito-footer">
+    <div class="resumen-linea">
+      <span>Subtotal</span>
+      <strong id="carrito-subtotal">$0.00</strong>
+    </div>
+    <p class="envio-nota"><i class="fa-solid fa-truck-fast"></i> ¡Envío gratis aplicado!</p>
+    <button type="button" class="btn-checkout" onclick="procesarPago()">COMPRAR AHORA</button>
+  </div>
+</aside>
+
+<script src="/JS/carrito.js"></script>
+  </header>
+
+  <main class="contenedor-informacion">
+
+    <section id="quienes-somos" class="tarjeta-info">
+      <div class="badge-titulo">Quiénes somos</div>
+      <p class="texto-info">
+        En <strong>Tecnoshop</strong> somos líderes en la distribución de tecnología de vanguardia, especializados en ecosistemas Apple y accesorios de alta gama. Nuestro compromiso es acercar la innovación a tu vida diaria con productos 100% garantizados y la mejor experiencia de compra.
+      </p>
+    </section>
+
+    <section id="mision-vision" class="tarjeta-info">
+      <div class="badge-titulo">Visión y Misión</div>
+      <div class="grid-doble">
+        <div>
+          <h3>Misión</h3>
+          <p class="texto-info">Proporcionar a nuestros clientes acceso rápido y seguro a lo último en telefonía, cómputo y audio, respaldado por un soporte técnico excepcional.</p>
+        </div>
+        <div>
+          <h3>Visión</h3>
+          <p class="texto-info">Ser la tienda de tecnología de referencia a nivel regional, destacándonos por la autenticidad de nuestros productos y la confianza de nuestra comunidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia" class="tarjeta-info">
+      <div class="badge-titulo">Historia</div>
+      <p class="texto-info">
+        Fundada para revolucionar el comercio tecnológico local, Tecnoshop comenzó como un proyecto enfocado en dispositivos portátiles. Hoy en día contamos con un catálogo de más de 40 productos de última generación y miles de usuarios satisfechos.
+      </p>
+    </section>
+
+    <section id="sucursales" class="tarjeta-info">
+      <div class="badge-titulo">Sucursales</div>
+      <ul class="lista-sucursales">
+        <li><strong>Sucursal Central:</strong> Av. Tecnológica #123, Centro Comercial Plaza Tech.</li>
+        <li><strong>Sucursal Norte:</strong> Calle Innovación #45, Galería Digital.</li>
+        <li><strong>Atención en Línea:</strong> Envíos a todo el país desde nuestro almacén central.</li>
+      </ul>
+    </section>
+
+    <section id="servicios" class="tarjeta-info">
+      <div class="badge-titulo">Servicios</div>
+      <ul class="lista-servicios">
+        <li>Venta directa de productos originales (iPhone, AirPods, iPads).</li>
+        <li>Garantía extendida y soporte técnico especializado.</li>
+        <li>Envíos rápidos y seguros con seguimiento en tiempo real.</li>
+        <li>Asesoría personalizada en compras corporativas y personales.</li>
+      </ul>
+    </section>
+
+  </main>
+
+</body>
+</html>

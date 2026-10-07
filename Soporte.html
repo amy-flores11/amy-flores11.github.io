@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Soporte Técnico - Tecnoshop</title>
+  <link rel="stylesheet" href="../CSS/Soporte.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Tecno shop</div>
+
+    <nav class="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="Producto.html">Producto</a>
+      <a href="Ofertas.html">Ofertas</a>
+      <a href="#" class="active">Soporte</a>
+      <a href="Contacto.html">Contacto</a>
+
+      <button type="button" class="btn-carrito-nav nav-carrito-link" id="btnAbrirCarrito" onclick="toggleCarrito()">
+  <i class="fa-solid fa-cart-shopping"></i>
+  <span class="badge-contador" id="carrito-contador">0</span>
+</button>
+
+    </nav>
+
+    <div class="user-session id="btn-login">
+    <a href="../HTML/login.html" class="user-session" id="btn-login">
+       <span class="material-symbols-outlined icon-user">account_circle</span>
+      <span id="texto-usuario">Iniciar sesión</span>
+    </a> 
+    </div>
+  </header>
+
+  <div class="overlay-carrito" id="overlayCarrito" onclick="toggleCarrito()"></div>
+
+<aside class="panel-carrito" id="panelCarrito">
+  <div class="carrito-header">
+    <h3>Mi Carrito (<span id="carrito-cant-total">0</span>)</h3>
+    <button type="button" class="btn-cerrar" onclick="toggleCarrito()">&times;</button>
+  </div>
+
+  <div class="carrito-items" id="carritoItems">
+  </div>
+
+  <div class="carrito-footer">
+    <div class="resumen-linea">
+      <span>Subtotal</span>
+      <strong id="carrito-subtotal">$0.00</strong>
+    </div>
+    <p class="envio-nota"><i class="fa-solid fa-truck-fast"></i> ¡Envío gratis aplicado!</p>
+    <button type="button" class="btn-checkout" onclick="procesarPago()">COMPRAR AHORA</button>
+  </div>
+</aside>
+
+<script src="/JS/carrito.js"></script>
+
+  <header class="barra-superior">
+    <div class="logo">Soporte</div>
+    <button class="btn-contacto-head" onclick="mostrarPantalla('contacto')">Contactar Soporte</button>
+  </header>
+
+  <main id="pantalla-principal" class="pantalla activa">
+    
+    <section class="banner-hero">
+      <div class="hero-texto">
+        <h1>Te ayudamos con lo que necesites</h1>
+        <p>Encuentra respuestas, soluciones y recursos para tus productos de Tecnoshop.</p>
+        
+      <div class="hero-imagen">
+        <!-- Imagen de dispositivos tipo Apple -->
+        <img src="/IMG/apple.png" alt="Dispositivos Tecnoshop">
+      </div>
+    </section>
+
+    <section class="seccion-accesos">
+      <div class="tarjeta-acceso">
+        <span class="icono">📦</span>
+        <h3>Estado del Pedido</h3>
+        <p>Rastrea tus compras en vivo</p>
+      </div>
+      <div class="tarjeta-acceso">
+        <span class="icono">🛡️</span>
+        <h3>Garantías</h3>
+        <p>Políticas y cobertura TecnoCare</p>
+      </div>
+      <div class="tarjeta-acceso">
+        <span class="icono">🛠️</span>
+        <h3>Reparaciones</h3>
+        <p>Agenda una cita técnica</p>
+      </div>
+    </section>
+
+    <section class="seccion-faq">
+      <h2>Preguntas Frecuentes</h2>
+
+      <div class="lista-faq">
+        <details class="item-faq">
+          <summary>📱 ¿Cómo puedo iniciar sesión?</summary>
+          <p>Haz clic en el botón 'Cuenta' en la esquina superior derecha e ingresa tu correo registrado y contraseña.</p>
+        </details>
+
+        <details class="item-faq">
+          <summary>🔒 ¿Cómo recupero mi contraseña?</summary>
+          <p>En la pantalla de inicio de sesión, presiona 'Olvidé mi contraseña' y te enviaremos un enlace de recuperación.</p>
+        </details>
+
+        <details class="item-faq">
+          <summary>🛠️ ¿Cómo contactar al soporte?</summary>
+          <p>Puedes presionar el botón 'Contactar Soporte' en la parte superior o enviar una solicitud desde el formulario inferior.</p>
+        </details>
+
+        <details class="item-faq">
+          <summary>💳 ¿Qué métodos de pago aceptan?</summary>
+          <p>Aceptamos tarjetas de crédito/débito (Visa, Mastercard, Amex), PayPal y transferencias bancarias.</p>
+        </details>
+
+        <details class="item-faq">
+          <summary>🚚 ¿Cuánto tarda un envío?</summary>
+          <p>Los envíos estándar toman de 2 a 4 días hábiles. Los envíos exprés se entregan en 24 horas.</p>
+        </details>
+
+        <details class="item-faq">
+          <summary>📍 ¿Dónde están ubicados?</summary>
+          <p>Nuestra sede central y centro de servicio autorizado se encuentran en Av. Tecnológica #102.</p>
+        </details>
+      </div>
+
+      <div class="caja-btn-contacto">
+        <p>¿No encontraste lo que buscabas?</p>
+        <button class="btn-contacto-principal" onclick="mostrarPantalla('contacto')">Enviar una Mensaje o Consulta</button>
+      </div>
+    </section>
+  </main>
+
+  <section id="pantalla-contacto" class="pantalla">
+    <div class="contenedor-formulario">
+      <button class="btn-regresar" onclick="mostrarPantalla('principal')">← Volver a Soporte</button>
+      
+      <h2>Contactar a Soporte Tecnoshop</h2>
+      <p>Déjanos tus datos y el detalle de tu inconveniente. Te responderemos en menos de 24 horas.</p>
+
+      <form id="form-queja" onsubmit="enviarMensaje(event)">
+        <div class="grupo-campo">
+          <label for="correo">Correo Electrónico *</label>
+          <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+        </div>
+
+        <div class="grupo-campo">
+          <label for="tipo">Tipo de Solicitud</label>
+          <select id="tipo">
+            <option value="queja">Mensaje / Reclamo</option>
+            <option value="garantia">Garantía / Falla de Producto</option>
+            <option value="envio">Problema con Envío</option>
+            <option value="otro">Consulta General</option>
+          </select>
+        </div>
+
+        <div class="grupo-campo">
+          <label for="queja">Detalle del Mensaje *</label>
+          <textarea id="queja" rows="5" placeholder="Escribe aquí tu mensaje detallado..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="notificacion-exito" class="toast-notificacion">
+    <div class="contenido-toast">
+      <span class="icono-check">✓</span>
+      <div>
+        <h4>¡Mensaje Recibido!</h4>
+        <p>Hemos registrado tu solicitud. Redirigiendo a soporte...</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="contacto-section">
+    
+    <!-- Columna Izquierda: Información de Tecnoshop -->
+    <div class="info-tecnoshop">
+      <h2 class="tag-badge">CONOCE MÁS DE TECNOSHOP</h2>
+      <ul class="lista-interes">
+        <li><a href="Producto.html">Ver todos los modelos de Tecnoshop</a></li>
+        <li><a href="Contacto.html">Servicio al cliente</a></li>
+        <li><a href="campañas.html">Nuevas campañas</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna Derecha: Redes Sociales -->
+    <div class="redes-sociales">
+      <div class="box-badge">
+        <span>Contactanos en nuestras redes sociales</span>
+      </div>
+
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank" class="social-item">
+          <i class="fa-brands fa-instagram icon-social"></i>
+          <span class="handle">@tecnoshopoficial</span>
+        </a>
+
+        <a href="https://x.com" target="_blank" class="social-item">
+          <i class="fa-brands fa-x-twitter icon-social"></i>
+          <span class="handle">@tecnoshopoficial</span>
+        </a>
+
+        <a href="https://tiktok.com" target="_blank" class="social-item">
+          <i class="fa-brands fa-tiktok icon-social"></i>
+          <span class="handle">@tecnoshopoficial</span>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER  -->
+  <footer class="footer-sections">
+    
+    <!-- Columna 1: Información -->
+    <div class="footer-col">
+      <div class="col-header">Información</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="#">Quiénes somos</a></li>
+          <li><a href="#">Visión y Misión</a></li>
+          <li><a href="#">Historia</a></li>
+          <li><a href="#">Sucursales</a></li>
+          <li><a href="#">Servicios</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Columna 2: Categorías -->
+    <div class="footer-col">
+      <div class="col-header">Categorías</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="#">Celulares</a></li>
+          <li><a href="#">Computadoras</a></li>
+          <li><a href="#">Airpods</a></li>
+          <li><a href="#">Ipads</a></li>
+          <li><a href="#">Relojs inteligentes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Columna 3: Técnico -->
+    <div class="footer-col">
+      <div class="col-header">Técnico</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="#">Servicio al cliente</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Política de devoluciones y garantías</a></li>
+          <li><a href="#">Contáctenos</a></li>
+          <li><a href="#">Seguridad del sitio</a></li>
+          <li><a href="#">Política y Privacidad</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <script src="../JS/Soporte.js"></script>
+</body>
+</html>

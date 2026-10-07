@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contacto - Tecnoshop</title>
+  <link rel="stylesheet" href="../CSS/Contacto.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+ <header class="navbar">
+    <div class="logo">Tecno shop</div>
+
+    <nav class="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="Producto.html">Producto</a>
+      <a href="Ofertas.html">Ofertas</a>
+      <a href="Soporte.html">Soporte</a>
+      <a href="#" class="active">Contacto</a>
+
+
+      <button type="button" class="btn-carrito-nav nav-carrito-link" id="btnAbrirCarrito" onclick="toggleCarrito()">
+  <i class="fa-solid fa-cart-shopping"></i>
+  <span class="badge-contador" id="carrito-contador">0</span>
+</button>
+    </nav>
+
+    <div class="user-session id="btn-login">
+    <a href="../HTML/login.html" class="user-session" id="btn-login">
+       <span class="material-symbols-outlined icon-user">account_circle</span>
+      <span id="texto-usuario">Iniciar sesión</span>
+    </a> 
+    </div>
+  </header>
+
+  <div class="overlay-carrito" id="overlayCarrito" onclick="toggleCarrito()"></div>
+
+<aside class="panel-carrito" id="panelCarrito">
+  <div class="carrito-header">
+    <h3>Mi Carrito (<span id="carrito-cant-total">0</span>)</h3>
+    <button type="button" class="btn-cerrar" onclick="toggleCarrito()">&times;</button>
+  </div>
+
+  <div class="carrito-items" id="carritoItems">
+  </div>
+
+  <div class="carrito-footer">
+    <div class="resumen-linea">
+      <span>Subtotal</span>
+      <strong id="carrito-subtotal">$0.00</strong>
+    </div>
+    <p class="envio-nota"><i class="fa-solid fa-truck-fast"></i> ¡Envío gratis aplicado!</p>
+    <button type="button" class="btn-checkout" onclick="procesarPago()">COMPRAR AHORA</button>
+  </div>
+</aside>
+
+<script src="/JS/carrito.js"></script>
+
+
+  <section class="hero-contacto">
+    <div class="hero-contenido">
+      <div class="hero-texto">
+        <span class="badge-soporte">Atención 24/7</span>
+        <h1>Contacta con nosotros</h1>
+        <p>¿Tienes alguna duda con tu compra o necesitas asesoría personalizada? Escríbenos o conéctate con nuestro equipo en un toque.</p>
+        
+        <div class="tarjetas-rapidas-info">
+  <div class="info-item">
+    <i class="fa-solid fa-phone"></i>
+    <div>
+      <span>Llámanos directo</span>
+      <a href="https://wa.me/50378343316?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer">
+        <strong>+503 7834-3316</strong>
+      </a>
+    </div>
+  </div>
+
+  <div class="info-item">
+    <i class="fa-solid fa-envelope"></i>
+    <div>
+      <span>Correo de soporte</span>
+      <a href="mailto:tecnoshop.170@tecnoshop.com">
+        <strong>tecnoshop.170@tecnoshop.com</strong>
+      </a>
+    </div>
+  </div>
+</div>
+      </div> 
+
+      <div class="hero-imagen-wrapper">
+        <img src="../IMG/Contactoimagen.jpg" alt="Contacto Tecnoshop" class="hero-imagen">
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-referencia">
+    <div class="contenedor-tarjetas">
+      
+      <!-- Bloque Izquierdo: Conoce Más -->
+      <div class="tarjeta-conoce">
+        <div class="caja-titulo-conoce">
+          <h3>CONOCE MÁS DE<br>TECNOSHOP</h3>
+        </div>
+        <ul class="lista-conoce">
+          <li><a href="Producto.html">Ver todos los modelos de Tecnoshop</a></li>
+          <li><a href="Soporte.html">Servicio al cliente</a></li>
+          <li><a href="campañas.html">Nuevas campañas</a></li>
+        </ul>
+      </div>
+
+      <div class="tarjeta-redes">
+        <div class="caja-titulo-redes">
+          <h3>Contactanos en nuestras redes sociales</h3>
+        </div>
+        <div class="lista-redes">
+          <a href="https://www.instagram.com/tecnoshop__sv?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" class="item-red">
+            <i class="fa-brands fa-instagram"></i>
+            <span>@tecnoshopoficial</span>
+          </a>
+          <a href="https://x.com/TecnoShop2026" target="_blank" class="item-red">
+            <i class="fa-brands fa-x-twitter"></i>
+            <span>@tecnoshopoficial</span>
+          </a>
+          <a href="https://tiktok.com/@tecno.shop340" target="_blank" class="item-red">
+            <i class="fa-brands fa-tiktok"></i>
+            <span>@tecnoshopoficial</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="seccion-ubicacion">
+    <div class="contenedor-mapa">
+      <div class="info-mapa">
+        <h2>Visita nuestra tienda</h2>
+        <p class="direccion"><i class="fa-solid fa-location-dot"></i> Av. Tecnológica #102, Edificio Tecno, Ciudad Central</p>
+        
+        <div class="bloque-horarios">
+          <h4><i class="fa-regular fa-clock"></i> Horarios de Atención</h4>
+          <p><span>Lunes a Viernes:</span> 8:00 AM - 8:00 PM</p>
+          <p><span>Sábados y Domingos:</span> 9:00 AM - 6:00 PM</p>
+        </div>
+
+        <a href="https://maps.google.com" target="_blank" class="btn-como-llegar">
+          <i class="fa-solid fa-diamond-turn-right"></i> Abrir en Google Maps
+        </a>
+      </div>
+
+      <div class="mapa-iframe-wrapper">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.012567439366!2d-89.22416828517036!3d13.692348590385966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f63304875b7b9ef%3A0x7d2872bc971360bc!2sSan%20Salvador!5e0!3m2!1ses!2ssv!4v1680000000000!5m2!1ses!2ssv" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+ <section class="contacto-section">
+    
+    <!-- Columna Izquierda: Información de Tecnoshop -->
+    <div class="info-tecnoshop">
+      <h2 class="tag-badge">CONOCE MÁS DE TECNOSHOP</h2>
+      <ul class="lista-interes">
+        <li><a href="Producto.html">Ver todos los modelos de Tecnoshop</a></li>
+        <li><a href="Soporte.html">Servicio al cliente</a></li>
+        <li><a href="campañas.html">Nuevas campañas</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna Derecha: Redes Sociales -->
+    <div class="redes-sociales">
+      <div class="box-badge">
+        <span>Contactanos en nuestras redes sociales</span>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/tecnoshop__sv?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" class="social-item">
+          <i class="fa-brands fa-instagram icon-social"></i>
+          <span class="handle">@tecnoshopoficial</span>
+        </a>
+
+        <a href="https://x.com/TecnoShop2026" target="_blank" class="social-item">
+          <i class="fa-brands fa-x-twitter icon-social"></i>
+          <span class="handle">@tecnoshopoficial</span>
+        </a>
+
+        <a href="https://tiktok.com/@tecno.shop340" target="_blank" class="social-item">
+          <i class="fa-brands fa-tiktok icon-social"></i>
+          <span class="handle">@tecnoshopoficial</span>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER  -->
+  <footer class="footer-sections">
+    
+    <!-- Columna 1: Información -->
+    <div class="footer-col">
+      <div class="col-header">Información</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="#">Quiénes somos</a></li>
+          <li><a href="#">Visión y Misión</a></li>
+          <li><a href="#">Historia</a></li>
+          <li><a href="#">Sucursales</a></li>
+          <li><a href="#">Servicios</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Columna 2: Categorías -->
+    <div class="footer-col">
+      <div class="col-header">Categorías</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="#">Celulares</a></li>
+          <li><a href="#">Computadoras</a></li>
+          <li><a href="#">Airpods</a></li>
+          <li><a href="#">Ipads</a></li>
+          <li><a href="#">Relojs inteligentes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Columna 3: Técnico -->
+    <div class="footer-col">
+      <div class="col-header">Técnico</div>
+      <div class="col-content">
+        <ul>
+          <li><a href="#">Servicio al cliente</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Política de devoluciones y garantías</a></li>
+          <li><a href="#">Contáctenos</a></li>
+          <li><a href="#">Seguridad del sitio</a></li>
+          <li><a href="#">Política y Privacidad</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+</html>

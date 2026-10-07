@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Finalizar Compra - Tecno Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; }
+    .checkout-container { max-width: 800px; margin: 30px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    h2 { color: #333; text-align: center; margin-bottom: 25px; }
+    .form-group { margin-bottom: 18px; }
+    label { display: block; margin-bottom: 6px; font-weight: 600; color: #444; }
+    input[type="text"], input[type="email"], select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 15px; }
+    .row { display: flex; gap: 15px; }
+    .row .form-group { flex: 1; }
+    .resumen-pago { background: #eef6fc; padding: 15px; border-radius: 8px; margin-bottom: 25px; }
+    .resumen-pago h3 { margin-top: 0; color: #0056b3; }
+    .btn-pagar { width: 100%; background: #28a745; color: white; border: none; padding: 15px; font-size: 18px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: background 0.3s; }
+    .btn-pagar:hover { background: #218838; }
+    .btn-volver { display: block; text-align: center; margin-top: 15px; color: #666; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <div class="checkout-container">
+    <h2><i class="fa-solid fa-credit-card"></i> Pasarela de Pago Falsa</h2>
+
+    <div class="resumen-pago">
+      <h3>Resumen de la orden</h3>
+      <div id="lista-resumen"></div>
+      <hr style="border:0; border-top:1px solid #ccc; margin:10px 0;">
+      <p style="font-size: 18px; font-weight:bold; text-align:right; margin:0;">Total a pagar: <span id="total-pago">$0.00</span></p>
+    </div>
+
+    <form id="form-pago" onsubmit="realizarCompraFalsa(event)">
+      <h3>Datos del Cliente</h3>
+      <div class="row">
+        <div class="form-group">
+          <label>Nombre Completo</label>
+          <input type="text" placeholder="Ej. Juan Pérez" required>
+        </div>
+        <div class="form-group">
+          <label>Correo Electrónico</label>
+          <input type="email" placeholder="juan@gmail.com" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Dirección de Envío</label>
+        <input type="text" placeholder="Calle Falsa 123, Ciudad" required>
+      </div>
+
+      <h3>Detalles de la Tarjeta</h3>
+      <div class="form-group">
+        <label>Número de Tarjeta (Prueba)</label>
+        <input type="text" placeholder="4532 0000 0000 0000" maxlength="19" required>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label>Expiración</label>
+          <input type="text" placeholder="MM/AA" maxlength="5" required>
+        </div>
+        <div class="form-group">
+          <label>CVC / CVV</label>
+          <input type="text" placeholder="123" maxlength="3" required>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-pagar">PAGAR AHORA</button>
+    </form>
+
+    <a href="Producto.html" class="btn-volver"><i class="fa-solid fa-arrow-left"></i> Volver a la tienda</a>
+  </div>
+
+  <script>
+    // Cargar datos del carrito en la pantalla de pago
+    document.addEventListener('DOMContentLoaded', () => {
+      const carrito = JSON.parse(localStorage.getItem('tecnoshop_carrito')) || [];
+      const lista = document.getElementById('lista-resumen');
+      const totalEl = document.getElementById('total-pago');
+      let total = 0;
+
+      if (carrito.length === 0) {
+        lista.innerHTML = '<p>No hay productos seleccionados.</p>';
+        return;
+      }
+
+      carrito.forEach(prod => {
+        const sub = prod.precio * prod.cantidad;
+        total += sub;
+        lista.innerHTML += `<p style="margin:5px 0;"><strong>${prod.cantidad}x</strong> ${prod.nombre} - $${sub.toFixed(2)}</p>`;
+      });
+
+      totalEl.innerText = `$${total.toFixed(2)}`;
+    });
+
+    // Simular el proceso de pago
+    function realizarCompraFalsa(e) {
+      e.preventDefault();
+      alert("¡Pago procesado con éxito! Gracias por tu compra simulada en Tecno Shop.");
+      localStorage.removeItem('tecnoshop_carrito'); // Limpia el carrito
+      window.location.href = 'Producto.html'; // Vuelve a la tienda
+    }
+  </script>
+</body>
+</html>
